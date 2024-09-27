@@ -1,0 +1,160 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  [type='text']:focus,
+  [type='submit']:focus,
+  [type='email']:focus,
+  [type='url']:focus,
+  [type='password']:focus,
+  [type='number']:focus,
+  [type='date']:focus,
+  [type='datetime-local']:focus,
+  [type='month']:focus,
+  [type='search']:focus,
+  [type='tel']:focus,
+  [type='time']:focus,
+  [type='week']:focus,
+  [multiple]:focus,
+  textarea:focus,
+  select:focus,
+  summary:focus,
+  button:focus,
+  a:focus,
+  iframe:focus,
+  .button:focus {
+    --tw-ring-color: rgba(134, 25, 143, 0.4);
+    border-color: var(--tw-ring-color);
+    outline: none;
+  }
+
+  [type='checkbox'],
+  [type='radio'] {
+    color: rgb(134, 25, 143);
+  }
+
+  [type='checkbox']:focus,
+  [type='radio']:focus {
+    --tw-ring-color: rgb(134, 25, 143);
+  }
+  summary:focus,
+  button:focus,
+  a:focus {
+    box-shadow: 0 0 0 3px rgba(134, 25, 143, 0.4);
+    border-color: rgb(134, 25, 143);
+  }
+}
+
+summary,
+button,
+a {
+  @apply transition
+    duration-150
+    ease-in-out;
+}
+
+.right_align {
+  @apply block text-right;
+}
+.center_align {
+  @apply block text-center;
+}
+.justify {
+  @apply block text-justify;
+}
+
+.button {
+  @apply inline-block
+    transform
+    rounded
+    bg-indigo-800
+    px-3 md:px-6
+    py-2
+    font-medium
+    text-white
+    shadow
+    hover:bg-teal-600
+    hover:shadow-md
+    hover:shadow-teal-600/50
+    md:px-6
+    md:py-3
+    md:text-lg;
+}
+
+h1 {
+  @apply mb-4 text-4xl font-extrabold;
+}
+h2 {
+  @apply my-2 text-2xl font-medium;
+}
+h3 {
+  @apply my-2 text-xl font-medium;
+}
+h4 {
+  @apply my-2 text-xl font-medium;
+}
+h5 {
+  @apply my-2 text-lg font-medium;
+}
+h6 {
+  @apply my-2 text-base font-medium;
+}
+
+/* Page Header */
+.hero h1 {
+  @apply mb-0 inline-block text-4xl leading-tight tracking-tight md:text-6xl;
+  strong {
+    @apply bg-gradient-to-tr from-fuchsia-800 via-indigo-800 to-teal-500 bg-clip-text text-transparent;
+  }
+}
+
+.indicator {
+  @apply transition duration-500 ease-in-out;
+}
+details[open] .indicator,
+button[aria-expanded='true'] .indicator {
+  @apply rotate-180 transform;
+}
+summary::-webkit-details-marker {
+  display: none;
+}
+
+/* Card deck */
+.component-card .link:after {
+  background-color: transparent;
+  bottom: 0;
+  content: '';
+  left: 0;
+  pointer-events: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 10;
+}
+.component-counter {
+  .counter-0 .number {
+    @apply text-indigo-900 dark:text-indigo-200;
+  }
+  .counter-1 .number {
+    @apply text-indigo-800 dark:text-indigo-300;
+  }
+  .counter-2 .number {
+    @apply text-indigo-700 dark:text-indigo-400;
+  }
+}
+
+/* Art Direction */
+@media screen and (max-width: 1024px) {
+  .art-directed {
+    width: 100%;
+    aspect-ratio: 1440 / 1072;
+  }
+}
+[data-oembed] {
+  @apply relative inline-block aspect-video w-full p-1;
+  iframe,
+  video {
+    @apply absolute inset-0 h-full w-full rounded bg-black;
+  }
+}

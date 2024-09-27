@@ -1,0 +1,19 @@
+{
+	"geolocation": {
+		"data": {
+			"city": "Newham",
+			"country": {
+				"code": "GB",
+				"name": "United Kingdom"
+			},
+			"subdivision": {
+				"code": "ENG",
+				"name": "England"
+			},
+			"timezone": "Europe/London",
+			"latitude": 51.5112,
+			"longitude": 0.03
+		},
+		"timestamp": 1708342748934
+	}
+}

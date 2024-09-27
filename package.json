@@ -1,0 +1,62 @@
+{
+  "name": "gatsby-prismic-template",
+  "private": true,
+  "description": "Junipers Gatsby Prismic Template",
+  "version": "1.0.0",
+  "author": "The Juniper Studio <hello@thejuniperstudio.com>",
+  "dependencies": {
+    "@headlessui/react": "^1.7.14",
+    "@prismicio/react": "^2.7.1",
+    "embla-carousel-autoplay": "^8.0.0-rc03",
+    "embla-carousel-react": "^8.0.0-rc03",
+    "gatsby": "^5.13.6",
+    "gatsby-plugin-gdpr-cookies": "^2.0.8",
+    "gatsby-plugin-image": "^3.1.0",
+    "gatsby-plugin-manifest": "^5.0.0",
+    "gatsby-plugin-offline": "^6.13.2",
+    "gatsby-plugin-prismic-previews": "^6.0.0",
+    "gatsby-plugin-robots-txt": "^1.8.0",
+    "gatsby-plugin-sharp": "^5.0.0",
+    "gatsby-plugin-sitemap": "^6.0.0",
+    "gatsby-source-filesystem": "^5.0.0",
+    "gatsby-source-prismic": "^6.0.0",
+    "gatsby-transformer-sharp": "^5.0.0",
+    "hamburger-react": "^2.4.1",
+    "react": "^18.1.0",
+    "react-cookie-consent": "^9.0.0",
+    "react-countup": "^6.1.1",
+    "react-dom": "^18.1.0",
+    "react-lite-youtube-embed": "^2.2.2"
+  },
+  "devDependencies": {
+    "@tailwindcss/typography": "^0.5.2",
+    "autoprefixer": "^10.4.2",
+    "gatsby-plugin-netlify": "^5.0.0",
+    "gatsby-plugin-postcss": "^6.0.0",
+    "postcss": "^8.4.7",
+    "postcss-import": "^16.0.1",
+    "prettier": "^3.0.0",
+    "prettier-plugin-tailwindcss": "^0.5.6",
+    "tailwindcss": "^3.0.23"
+  },
+  "keywords": [
+    "gatsby"
+  ],
+  "license": "0BSD",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+  },
+  "bugs": {
+    "url": "https://github.com/gatsbyjs/gatsby/issues"
+  }
+}
