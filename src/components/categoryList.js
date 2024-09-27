@@ -1,6 +1,5 @@
 import React from 'react'
 import { PrismicLink } from '@prismicio/react'
-import { GatsbyImage } from 'gatsby-plugin-image'
 
 const CategoryList = ({ item }) => {
   const itemData = item.node.data
