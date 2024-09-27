@@ -8,6 +8,7 @@ import htmlSerializer from './src/utils/htmlSerializer'
 import { repositoryConfigs } from './src/utils/prismicPreviews'
 
 // CSS
+import '@fontsource/poppins'
 import './src/styles/default.css'
 
 export const wrapRootElement = ({ element }) => (

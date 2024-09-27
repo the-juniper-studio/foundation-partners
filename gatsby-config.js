@@ -144,7 +144,7 @@ module.exports = {
           },
           {
             type: 'blogpost',
-            path: '/:lang?/blog/:uid'
+            path: '/:lang?/insights/:uid'
           }
         ]
       }
@@ -165,7 +165,7 @@ module.exports = {
           },
           {
             type: 'blogpost',
-            path: '/:lang?/blog/:uid'
+            path: '/:lang?/insights/:uid'
           }
         ]
       }

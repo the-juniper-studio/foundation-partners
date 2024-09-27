@@ -15,7 +15,7 @@ const CardDeck = ({ slice }) => {
   return (
     <section className='component-card_deck mx-auto w-full max-w-screen-xl px-3 md:px-6 py-10'>
       {slice.primary.title.text && (
-        <div className='prose prose-lg mb-10 max-w-none text-center dark:prose-invert lg:prose-lg'>
+        <div className='prose mb-10 max-w-screen-md mx-auto text-center dark:prose-invert lg:prose-lg'>
           <PrismicRichText field={slice.primary.title.richText} />
         </div>
       )}

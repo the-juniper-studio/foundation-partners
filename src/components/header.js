@@ -27,8 +27,8 @@ const Header = ({ altLangs, lang }) => {
 
   // Tidy?
   const navStyles =
-    'flex w-full flex-row justify-between items-center p-4 font-medium text-slate-700 dark:text-slate-50 transition duration-150 ease-in-out dark:hover:text-indigo-200 hover:text-indigo-700 focus:text-slate-900 dark:focus:text-indigo-50'
-  const subNavStyles = 'block py-4 px-6 font-medium text-slate-700 transition duration-150 ease-in-out hover:text-indigo-700 focus:text-slate-900'
+    'flex w-full flex-row justify-between items-center p-4 text-slate-900 dark:text-slate-50 transition duration-150 ease-in-out dark:hover:text-indigo-200 hover:text-indigo-700 focus:text-slate-900 dark:focus:text-indigo-50 hover:underline hover:underline-offset-4'
+  const subNavStyles = 'block py-4 px-6 text-slate-900 transition duration-150 ease-in-out hover:text-indigo-700 focus:text-slate-900'
 
   return (
     <header role='banner' className='absolute left-0 right-0 top-0 z-20 text-white'>

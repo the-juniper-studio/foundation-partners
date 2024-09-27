@@ -12,7 +12,7 @@ const BannerWithCaption = ({ slice }) => {
         <div
           className={`${
             slice.primary.image_position === true ? 'md:ml-auto md:mr-0' : 'md:ml-0 md:mr-auto'
-          } prose flex h-full w-full flex-col items-start justify-center space-y-4 rounded border bg-white px-3 shadow dark:prose-invert lg:prose-lg dark:border-slate-700 dark:bg-slate-700 md:p-10`}>
+          } prose flex h-full w-full flex-col items-start justify-center space-y-4 px-3 dark:prose-invert lg:prose-lg`}>
           <div>
             <PrismicRichText field={slice.primary.title.richText} />
             <PrismicRichText field={slice.primary.text.richText} />

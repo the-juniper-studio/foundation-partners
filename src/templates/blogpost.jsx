@@ -27,7 +27,7 @@ const BlogpostTemplate = ({ data, location }) => {
       <PageHeader authorData={pageData.author?.document.data} type={page.type} pageData={pageData} publishDate={data.prismicBlogpost.first_publication_date_formatted} />
       <Breadcrumb location={location} />
       <div className='mx-auto grid w-full max-w-screen-xl grid-cols-1 gap-10 p-6 pb-10 md:p-8 lg:grid-flow-dense lg:grid-cols-3'>
-        <div className='article-body prose prose-lg dark:prose-invert lg:col-span-2 lg:col-start-1 min-w-full'>
+        <div className='article-body prose lg:prose-lg dark:prose-invert lg:col-span-2 lg:col-start-1 min-w-full'>
           <PrismicRichText field={pageData.page_text.richText} />
           {page.tags?.length > 0 && (
             <div className='flex gap-3'>

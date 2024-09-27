@@ -5,7 +5,7 @@ const createBlogPages = ({ createPage, blogposts, blogpostsPerPage }) => {
   const numPages = Math.ceil(blogposts.length / blogpostsPerPage)
   for (let i = 0; i < numPages; i++) {
     createPage({
-      path: i === 0 ? `/blog/` : `/blog/${i + 1}/`,
+      path: i === 0 ? `/insights/` : `/insights/${i + 1}/`,
       component: path.resolve('./src/templates/category.jsx'),
       context: {
         currentPage: i + 1,
@@ -22,7 +22,7 @@ const createBlogPages = ({ createPage, blogposts, blogpostsPerPage }) => {
 const createBlogPostPages = ({ createPage, blogposts }) => {
   blogposts.forEach((edge) => {
     createPage({
-      path: `/blog/${edge.node.uid}/`,
+      path: `/insights/${edge.node.uid}/`,
       component: path.resolve('./src/templates/blogpost.jsx'),
       context: {
         id: edge.node.id,
@@ -35,7 +35,7 @@ const createBlogPostPages = ({ createPage, blogposts }) => {
 // Function to create pages
 const createPages = ({ createPage, result }) => {
   result.data.allPrismicPage.edges.forEach((edge) => {
-    if (edge.node.uid !== 'blog') {
+    if (edge.node.uid !== 'insights') {
       const lang = edge.node.lang === process.env.GATSBY_PRISMIC_LANG ? '' : edge.node.lang.slice(0, 2) + '/'
       const url = edge.node.uid === 'index' ? `/${lang}` : `/${lang}${edge.node.uid}/`
       const component = edge.node.uid === '404' ? path.resolve('./src/templates/404.jsx') : path.resolve('./src/templates/page.jsx')
