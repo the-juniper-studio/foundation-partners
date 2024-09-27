@@ -22,22 +22,11 @@ export const blogpostQuery = graphql`
               image {
                 alt
                 copyright
-                gatsbyImageData(imgixParams: { fit: "facearea", facepad: 3 })
+                gatsbyImageData(imgixParams: { fit: "facearea", facepad: 4 })
               }
             }
           }
         }
-      }
-      page_image {
-        alt
-        copyright
-        gatsbyImageData(layout: FULL_WIDTH)
-        thumbnails {
-          mobile {
-            gatsbyImageData(layout: FULL_WIDTH)
-          }
-        }
-        url(imgixParams: { w: 1200, h: 630, fit: "crop" })
       }
       page_text {
         richText

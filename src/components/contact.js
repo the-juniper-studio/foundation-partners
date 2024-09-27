@@ -10,36 +10,42 @@ const Contact = ({ slice }) => {
             <PrismicRichText field={slice.primary.text.richText} />
           </div>
         )}
-        <div className='col-span-3 dark:border-slate-700 lg:border-l-2 lg:px-10'>
+        <div className='col-span-3 border-slate-700 lg:border-l-2 lg:px-10'>
           <form name='contact' method='POST' action='/success' data-netlify='true' data-netlify-honeypot='surname'>
             <input type='hidden' name='surname' />
             <input type='hidden' name='form-name' value='contact' />
             <div className='mb-5'>
-              <label className='mb-2 mt-4 block text-lg font-medium lg:mt-0 lg:text-xl' htmlFor='name'>
+              <label className='mb-2 mt-4 block lg:mt-0 lg:text-lg font-semibold' htmlFor='name'>
                 What's your name?
               </label>
-              <input className='w-full appearance-none rounded-sm p-3 leading-tight text-slate-700 shadow' type='text' name='name' id='name' required />
+              <input className='w-full appearance-none border-slate-700 border-2 rounded p-3 leading-tight text-slate-700 shadow' type='text' name='name' id='name' required />
             </div>
             <div className='mb-5'>
-              <label className='mb-2 mt-4 block text-lg font-medium lg:text-xl' htmlFor='email'>
+              <label className='mb-2 mt-4 block lg:text-lg font-semibold' htmlFor='email'>
                 What's your email address?
               </label>
-              <input className='w-full appearance-none rounded-sm p-3 leading-tight text-slate-700 shadow' type='email' name='email' id='email' required />
+              <input className='w-full appearance-none border-slate-700 border-2 rounded p-3 leading-tight text-slate-700 shadow' type='email' name='email' id='email' required />
             </div>
             <div className='mb-5'>
-              <label className='mb-2 mt-4 block text-lg font-medium lg:text-xl' htmlFor='phone'>
+              <label className='mb-2 mt-4 block lg:text-lg font-semibold' htmlFor='phone'>
                 What's your phone number?
               </label>
-              <input className='w-full appearance-none rounded-sm p-3 leading-tight text-slate-700 placeholder-slate-500  shadow' type='tel' name='phone' id='phone' placeholder='Optional' />
+              <input
+                className='w-full appearance-none border-slate-700 border-2 rounded p-3 leading-tight text-slate-700 placeholder-slate-500  shadow'
+                type='tel'
+                name='phone'
+                id='phone'
+                placeholder='Optional'
+              />
             </div>
             <div className='mb-5'>
-              <label className='mb-2 mt-4 block text-lg font-medium lg:text-xl' htmlFor='message'>
+              <label className='mb-2 mt-4 block lg:text-lg font-semibold' htmlFor='message'>
                 How can we help?
               </label>
-              <textarea rows='4' className='w-full appearance-none rounded-sm p-3 leading-tight text-slate-700 shadow' name='message' id='message' required></textarea>
+              <textarea rows='4' className='border-slate-700 border-2 w-full appearance-none rounded p-3 leading-tight text-slate-700 shadow' name='message' id='message' required></textarea>
             </div>
             <div className='mb-5 lg:mb-0'>
-              <button type='submit' className='button w-full rounded-sm sm:w-auto'>
+              <button type='submit' className='button w-full rounded sm:w-auto'>
                 Send your enquiry
               </button>
             </div>

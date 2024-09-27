@@ -103,7 +103,7 @@ export const Seo = ({ children, datePublished, dateModified, isArticle, pageData
           url,
           name: name,
           headline: title,
-          image: [page_image.url || facebook_image.url],
+          image: [facebook_image.url],
           description: description,
           author: {
             '@type': 'Person',

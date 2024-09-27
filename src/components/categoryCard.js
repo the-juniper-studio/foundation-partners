@@ -1,6 +1,6 @@
 import React from 'react'
 import { PrismicLink } from '@prismicio/react'
-import { GatsbyImage, getImage } from 'gatsby-plugin-image'
+import { GatsbyImage } from 'gatsby-plugin-image'
 
 const CategoryCard = ({ item }) => {
   const itemData = item.node.data
@@ -14,14 +14,11 @@ const CategoryCard = ({ item }) => {
     timeToRead = Math.ceil(wordCount / wordsPerMinute)
   }
   return (
-    <li className='component-card ease relative flex transform flex-col overflow-hidden rounded-sm border border-slate-50 bg-white p-2 shadow transition duration-300 ease-in-out hover:scale-105 hover:shadow-lg hover:shadow-indigo-800/10 dark:border-slate-700 dark:bg-slate-700'>
+    <li className='component-card ease relative flex transform flex-col overflow-hidden py-3 border-t-2 border-slate-900 group'>
       <PrismicLink className='flex flex-1 flex-col' href={item.node.url}>
-        <div className='relative flex-shrink-0'>
-          <GatsbyImage image={getImage(itemData.page_image)} alt={itemData.page_image.alt || ''} />
-        </div>
-        <div className='m-3 flex flex-1 flex-col'>
-          <div className='mb-6 space-y-4 prose dark:prose-invert'>
-            <h3>{itemData.page_title.text}</h3>
+        <div className='flex flex-1 flex-col'>
+          <div className='mb-6 space-y-4 prose lg:prose-xl'>
+            <h3 className='group-hover:text-brandRust'>{itemData.page_title.text}</h3>
             <div className='mb-6 mt-3'>
               {itemData.page_text.text.split(' ').slice(0, 20).join(' ')}
               &hellip;

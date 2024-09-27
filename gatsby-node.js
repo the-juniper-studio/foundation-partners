@@ -36,8 +36,7 @@ const createBlogPostPages = ({ createPage, blogposts }) => {
 const createPages = ({ createPage, result }) => {
   result.data.allPrismicPage.edges.forEach((edge) => {
     if (edge.node.uid !== 'insights') {
-      const lang = edge.node.lang === process.env.GATSBY_PRISMIC_LANG ? '' : edge.node.lang.slice(0, 2) + '/'
-      const url = edge.node.uid === 'index' ? `/${lang}` : `/${lang}${edge.node.uid}/`
+      const url = edge.node.uid === 'index' ? `/` : `/${edge.node.uid}/`
       const component = edge.node.uid === '404' ? path.resolve('./src/templates/404.jsx') : path.resolve('./src/templates/page.jsx')
 
       createPage({
@@ -84,7 +83,6 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   const result = await graphql(`
     {
       allPrismicPage {
-        distinct(field: { lang: SELECT })
         edges {
           node {
             id

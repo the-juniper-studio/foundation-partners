@@ -20,7 +20,7 @@ const Breadcrumb = ({ location }) => {
   var fullPath = ''
   if (location.pathname === '/') return null
   return (
-    <nav className='z-20 w-full lg:border-b py-3' aria-label='Breadcrumb'>
+    <nav className='z-20 w-full py-3' aria-label='Breadcrumb'>
       <ol className='mx-auto flex w-full max-w-screen-xl items-center space-x-3 px-3 md:px-6' itemScope itemType='https://schema.org/BreadcrumbList'>
         <li itemProp='itemListElement' itemScope itemType='https://schema.org/ListItem'>
           <div>

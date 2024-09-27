@@ -42,9 +42,9 @@ const Header = ({ altLangs, lang }) => {
         <div
           className={`${
             !isOpen ? 'hidden' : 'fixed inset-0 z-10 flex h-screen flex-1 flex-col justify-start bg-black bg-opacity-25 p-2'
-          } backdrop-blur-sm md:relative md:flex md:h-auto md:w-full md:flex-row md:bg-transparent`}>
+          } backdrop-blur-sm md:relative md:flex md:h-auto md:w-full md:flex-row md:bg-transparent md:ml-auto`}>
           <div className='max-h-screen overflow-y-scroll rounded bg-white shadow-md md:max-h-none md:overflow-visible md:rounded-none md:bg-transparent md:shadow-none'>
-            <ul className='relative flex-row items-center pt-20 text-xl md:flex md:pt-0'>
+            <ul className='relative flex-row items-center pt-20 md:flex md:pt-0'>
               {headerData.nav.map((nav, index) => {
                 return (
                   <React.Fragment key={`nav-${index}`}>

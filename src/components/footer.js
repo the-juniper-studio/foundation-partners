@@ -22,7 +22,7 @@ const Footer = ({ lang }) => {
   const config = data.prismicConfig.data
 
   return (
-    <footer role='contentinfo' className='mt-auto bg-slate-800 text-slate-300 dark:bg-slate-900'>
+    <footer role='contentinfo' className='mt-auto'>
       <div className='mx-auto grid max-w-screen-xl grid-cols-1 gap-6 px-3 md:px-6 py-10 md:grid-cols-3'>
         <div>
           <div className='mb-4 font-medium uppercase text-slate-50'>{config.company_display_name}</div>
@@ -49,7 +49,7 @@ const Footer = ({ lang }) => {
           )
         })}
       </div>
-      <div className='bg-slate-900 py-3 text-center text-slate-300'>
+      <div className='py-3 text-center'>
         Crafted by {config.company_display_name} <span className='text-brand-green'>&copy;</span> <span>{new Date().getFullYear()}</span>
       </div>
     </footer>

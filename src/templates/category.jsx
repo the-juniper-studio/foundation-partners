@@ -12,7 +12,7 @@ import Seo from '../components/seo'
 
 export const query = graphql`
   query BlogPost($skip: Int!, $limit: Int!) {
-    prismicPage(uid: { eq: "blog" }) {
+    prismicPage(uid: { eq: "insights" }) {
       ...PrismicPageFragment
     }
     allPrismicBlogpost(limit: $limit, skip: $skip, sort: { first_publication_date: DESC }) {
@@ -37,7 +37,7 @@ const CategoryTemplate = ({ data, location, pageContext }) => {
       <Breadcrumb location={location} />
       <div className='relative mx-auto max-w-7xl px-3 md:px-6 py-5 pb-4 sm:px-6 sm:pb-8 md:py-8'>
         <div className='relative'>
-          <ul className='grid grid-cols-1 gap-5 md:grid-cols-3'>
+          <ul className='grid grid-cols-1 gap-6 md:grid-cols-3 md:gap-12'>
             {items.map((item, index) => {
               return <CategoryCard isBlogpost={true} item={item} key={`item-${index}`} />
             })}

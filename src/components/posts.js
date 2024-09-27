@@ -21,7 +21,7 @@ const Posts = ({ slice, id, layout, type }) => {
   `)
   const data = useMergePrismicPreviewData(staticData)
   const articles = type === 'blogpost' ? data.allPrismicBlogpost.edges : data.allPrismicCaseStudy.edges
-  let path = '/blog'
+  let path = '/insights'
 
   if (!articles) return null
   return (
@@ -31,7 +31,7 @@ const Posts = ({ slice, id, layout, type }) => {
           <PrismicRichText field={slice.primary.title.richText} />
         </div>
       )}
-      <ul className='flex flex-col gap-6'>
+      <ul className='flex flex-col gap-6 lg:gap-12'>
         {articles.map((item, index) => {
           if (item.node.id === id) return null
           if (layout === 'list') return <CategoryList publishDate={item.node.first_publication_date_formatted} type={type} item={item} key={`article-list-${index}`} />

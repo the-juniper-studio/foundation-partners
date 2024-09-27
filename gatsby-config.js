@@ -129,7 +129,7 @@ module.exports = {
       resolve: 'gatsby-source-prismic',
       options: {
         customTypesApiToken: process.env.GATSBY_PRISMIC_CUSTOM_TYPES_API_TOKEN,
-        lang: '*',
+        lang: process.env.GATSBY_PRISMIC_LANG,
         linkResolver: require('./src/utils/linkResolver').linkResolver,
         repositoryName: process.env.GATSBY_PRISMIC_MAIN_REPOSITORY_NAME,
         routes: [
