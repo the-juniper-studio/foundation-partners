@@ -65,7 +65,7 @@ const BlogpostTemplate = ({ data, location }) => {
           <PrismicRichText field={pageData.page_text.richText} />
         </div>
         <div className='lg:col-span-1 lg:col-start-3'>
-          <div className='top-16 flex flex-col gap-12 lg:sticky p-3'>
+          <div className='top-3 flex flex-col gap-12 lg:sticky bottom-3'>
             <Share title={pageData.page_title.text} link={page.url} image={pageData.page_image} />
             <div>
               <div className='prose mb-3 lg:mb-6'>

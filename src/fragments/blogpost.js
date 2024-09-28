@@ -40,7 +40,7 @@ export const blogpostQuery = graphql`
       meta_title
     }
     first_publication_date
-    first_publication_date_formatted: first_publication_date(formatString: "dddd, Do MMMM yyyy")
+    first_publication_date_formatted: first_publication_date(formatString: "Do MMMM yyyy")
     id
     lang
     last_publication_date

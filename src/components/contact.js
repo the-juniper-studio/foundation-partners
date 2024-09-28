@@ -4,13 +4,13 @@ import { PrismicRichText } from '@prismicio/react'
 const Contact = ({ slice }) => {
   return (
     <section className='component-contact mx-auto w-full max-w-screen-xl px-3 md:px-6 py-10'>
-      <div className='relative mx-auto max-w-7xl lg:grid lg:grid-cols-5'>
+      <div className='relative mx-auto max-w-7xl grid lg:grid-cols-5 gap-6 lg:gap-12'>
         {slice.primary.text.richText && (
-          <div className='prose col-span-2 max-w-screen-xl dark:prose-invert lg:prose-lg lg:pl-5 lg:pr-10'>
+          <div className='prose col-span-2 max-w-screen-xl dark:prose-invert lg:prose-lg lg:pr-10'>
             <PrismicRichText field={slice.primary.text.richText} />
           </div>
         )}
-        <div className='col-span-3 border-brandBlack lg:border-l-2 lg:px-10'>
+        <div className='col-span-3'>
           <form name='contact' method='POST' action='/success' data-netlify='true' data-netlify-honeypot='surname'>
             <input type='hidden' name='surname' />
             <input type='hidden' name='form-name' value='contact' />
