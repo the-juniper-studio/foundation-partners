@@ -24,25 +24,25 @@
   a:focus,
   iframe:focus,
   .button:focus {
-    --tw-ring-color: rgba(134, 25, 143, 0.4);
+    --tw-ring-color: rgba(220, 103, 71, 0.7);
     border-color: var(--tw-ring-color);
     outline: none;
   }
 
   [type='checkbox'],
   [type='radio'] {
-    color: rgb(134, 25, 143);
+    color: rgb(220, 103, 71);
   }
 
   [type='checkbox']:focus,
   [type='radio']:focus {
-    --tw-ring-color: rgb(134, 25, 143);
+    --tw-ring-color: rgb(220, 103, 71);
   }
   summary:focus,
   button:focus,
   a:focus {
-    box-shadow: 0 0 0 3px rgba(134, 25, 143, 0.4);
-    border-color: rgb(134, 25, 143);
+    box-shadow: 0 0 0 3px rgba(220, 103, 71, 0.7);
+    border-color: rgb(220, 103, 71);
   }
 }
 
@@ -69,12 +69,11 @@ a {
   @apply inline-block
     rounded-full
     bg-black
-    px-3 md:px-6
+    px-6
     py-2 md:py-3
     font-bold uppercase
-    shadow text-brandCream
-    hover:bg-brandMustard hover:shadow-md
-    hover:shadow-brandMustard/50 hover:text-black
+    shadow text-brandCream dark:border dark:border-brandCream
+    hover:bg-brandMustard hover:shadow-brandMustard/50 hover:text-black
     md:text-lg;
 }
 
@@ -101,13 +100,13 @@ h6 {
 .hero h1 {
   @apply mb-0 font-normal text-4xl md:text-6xl;
   strong {
-    @apply text-brandRust font-normal;
+    @apply text-brandRust dark:text-brandMustard font-normal;
   }
 }
 .component-banner_with_caption h2 {
   @apply mb-0 font-normal  text-3xl md:text-5xl;
   strong {
-    @apply text-brandRust font-normal;
+    @apply text-brandRust dark:text-brandMustard font-normal;
   }
 }
 

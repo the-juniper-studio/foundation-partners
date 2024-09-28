@@ -26,7 +26,7 @@ const Breadcrumb = ({ location }) => {
           <div>
             <Link
               to='/'
-              className='flex items-center justify-center rounded-full p-1 hover:bg-neutral-400 hover:text-white'
+              className='flex items-center justify-center rounded-full hover:bg-neutral-400 hover:text-white'
               itemScope
               itemType='https://schema.org/WebPage'
               itemProp='item'
