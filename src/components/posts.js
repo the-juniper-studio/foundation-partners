@@ -31,7 +31,7 @@ const Posts = ({ slice, id, layout, type }) => {
           <PrismicRichText field={slice.primary.title.richText} />
         </div>
       )}
-      <ul className='flex flex-col gap-6 lg:gap-12'>
+      <ul className='flex flex-col gap-6 lg:gap-x-12'>
         {articles.map((item, index) => {
           if (item.node.id === id) return null
           if (layout === 'list') return <CategoryList publishDate={item.node.first_publication_date_formatted} type={type} item={item} key={`article-list-${index}`} />

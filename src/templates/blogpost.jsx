@@ -60,7 +60,7 @@ const BlogpostTemplate = ({ data, location }) => {
         )}
       </div>
       <Breadcrumb location={location} />
-      <div className='mx-auto grid w-full max-w-screen-xl grid-cols-1 gap-10 p-3 md:p-6 pb-10 lg:grid-flow-dense lg:grid-cols-3'>
+      <div className='mx-auto grid w-full max-w-screen-xl grid-cols-1 gap-12 p-3 md:p-6 pb-10 lg:grid-flow-dense lg:grid-cols-3'>
         <div className='article-body prose lg:prose-lg dark:prose-invert lg:col-span-2 lg:col-start-1 min-w-full'>
           <PrismicRichText field={pageData.page_text.richText} />
         </div>
