@@ -24,7 +24,7 @@ const PageHeader = ({ authorData, type, pageData, publishDate }) => {
           <div className='absolute inset-0 z-0 bg-gradient-to-tr from-white to-transparent opacity-90 dark:from-brandBlack' />
         </div>
       )}
-      <div className='hero relative col-span-full w-full row-span-full mx-auto flex flex-col justify-center gap-6 px-3 md:px-6 pb-10 pt-32 lg:pt-48 md:max-w-screen-xl md:text-2xl'>
+      <div className='hero relative col-span-full w-full row-span-full mx-auto flex flex-col justify-center gap-6 px-3 md:px-6 pb-6 lg:pb-12 pt-32 lg:pt-48 md:max-w-screen-xl md:text-2xl'>
         <PrismicRichText field={pageData.page_title.richText} />
         {!article && (
           <>

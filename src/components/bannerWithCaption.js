@@ -4,7 +4,7 @@ import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 
 const BannerWithCaption = ({ slice }) => {
   return (
-    <section className='component-banner_with_caption relative mx-auto my-10 w-full max-w-screen-xl px-3 md:px-6 grid md:grid-cols-2 gap-6'>
+    <section className='component-banner_with_caption relative mx-auto my-6 lg:my-12 w-full max-w-screen-xl px-3 md:px-6 grid md:grid-cols-2 gap-6'>
       <div className={`${(slice.primary.image_position === true) & 'md:order-last'}`}>
         <GatsbyImage className='h-full w-full rounded' image={getImage(slice.primary.image)} alt={slice.primary.image.alt || ''} />
       </div>
