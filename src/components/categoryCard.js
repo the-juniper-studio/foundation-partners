@@ -14,9 +14,9 @@ const CategoryCard = ({ item }) => {
     timeToRead = Math.ceil(wordCount / wordsPerMinute)
   }
   return (
-    <li className='component-card ease relative flex transform flex-col overflow-hidden py-3 border-t-2 border-neutral-900 group'>
+    <li className='component-card ease relative flex transform flex-col overflow-hidden border-t-2 border-neutral-900 group'>
       <PrismicLink className='flex flex-1 flex-col' href={item.node.url}>
-        <div className='flex flex-1 flex-col'>
+        <div className='flex flex-1 flex-col my-6 lg:mb-12'>
           <div className='mb-6 space-y-4 prose lg:prose-xl'>
             <h3 className='group-hover:text-brandRust'>{itemData.page_title.text}</h3>
             <div className='mb-6 mt-3'>
