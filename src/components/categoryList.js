@@ -13,7 +13,7 @@ const CategoryList = ({ item }) => {
         <article className='relative isolate flex flex-col gap-6 lg:flex-row'>
           <div className='w-full'>
             <div className='flex flex-col items-start gap-x-3 text-sm'>
-              <time dateTime={publishDate} className='text-slate-500'>
+              <time dateTime={publishDate} className='text-neutral-500'>
                 {publishDate}
               </time>
             </div>
@@ -23,10 +23,10 @@ const CategoryList = ({ item }) => {
                 {itemData.page_title.text}
               </h3>
             </div>
-            <div className='flex border-slate-900/5'>
+            <div className='flex border-neutral-900/5'>
               <div className='relative flex items-center gap-x-3'>
                 <div className='text-sm leading-6'>
-                  <p className='font-semibold'>{authorData.name}</p>
+                  <p className='font-medium'>{authorData.name}</p>
                 </div>
               </div>
             </div>

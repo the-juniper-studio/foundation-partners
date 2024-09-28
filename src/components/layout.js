@@ -7,7 +7,7 @@ import Footer from './footer'
 
 const Layout = ({ altLangs, children, lang }) => {
   return (
-    <div className='flex min-h-screen flex-col bg-brandCream text-slate-800 antialiased dark:bg-slate-800 dark:text-brandCream'>
+    <div className='flex min-h-screen flex-col bg-brandCream text-brandBlack antialiased dark:bg-brandBlack dark:text-brandCream'>
       <a href='#main' className='sr-only focus:not-sr-only'>
         Skip to main content
       </a>

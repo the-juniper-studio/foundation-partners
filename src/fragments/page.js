@@ -60,6 +60,7 @@ export const pageQuery = graphql`
             }
             title {
               richText
+              text
             }
           }
         }
@@ -142,6 +143,7 @@ export const pageQuery = graphql`
             }
           }
         }
+
         ... on PrismicPageDataBodyHero {
           id
           slice_type
@@ -168,6 +170,7 @@ export const pageQuery = graphql`
             }
             title {
               richText
+              text
             }
           }
         }
@@ -220,6 +223,59 @@ export const pageQuery = graphql`
             }
             role
           }
+        }
+        ... on PrismicPageDataBodyTeam {
+          id
+          primary {
+            title {
+              richText
+              text
+            }
+            text {
+              html
+              richText
+            }
+          }
+          items {
+            team_member {
+              uid
+              document {
+                ... on PrismicTeamMember {
+                  id
+                  data {
+                    bio {
+                      richText
+                    }
+                    contact {
+                      phone_number
+                      email_address
+                      linked_in {
+                        isBroken
+                        link_type
+                        tags
+                        target
+                        type
+                        uid
+                        url
+                        id
+                      }
+                    }
+                    name
+                    position
+                    qualification
+                    image {
+                      alt
+                      copyright
+                      gatsbyImageData
+                    }
+                  }
+                  url
+                }
+              }
+              id
+            }
+          }
+          slice_type
         }
         ... on PrismicPageDataBodyText {
           id

@@ -26,7 +26,7 @@ const Breadcrumb = ({ location }) => {
           <div>
             <Link
               to='/'
-              className='flex items-center justify-center rounded-full p-1 hover:bg-slate-400 hover:text-white'
+              className='flex items-center justify-center rounded-full p-1 hover:bg-neutral-400 hover:text-white'
               itemScope
               itemType='https://schema.org/WebPage'
               itemProp='item'
@@ -52,7 +52,7 @@ const Breadcrumb = ({ location }) => {
                 ) : (
                   <Link
                     to={fullPath}
-                    className='inline-block border-r pr-3 text-sm font-semibold leading-normal underline underline-offset-2 hover:text-slate-400 hover:no-underline lg:text-base'
+                    className='inline-block border-r pr-3 text-sm font-medium leading-normal underline underline-offset-2 hover:text-neutral-400 hover:no-underline lg:text-base'
                     itemScope
                     itemType='https://schema.org/WebPage'
                     itemProp='item'

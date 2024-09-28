@@ -50,8 +50,9 @@ summary,
 button,
 a {
   @apply transition
-    duration-150
-    ease-in-out;
+    ease-in-out
+    transform
+    duration-300;
 }
 
 .right_align {
@@ -66,16 +67,12 @@ a {
 
 .button {
   @apply inline-block
-    transform
-    duration-300
     rounded-full
     bg-black
     px-3 md:px-6
     py-2 md:py-3
-    font-semibold
-    text-white
-    uppercase
-    shadow
+    font-bold uppercase
+    shadow text-brandCream
     hover:bg-brandMustard hover:shadow-md
     hover:shadow-brandMustard/50 hover:text-black
     md:text-lg;
@@ -102,14 +99,27 @@ h6 {
 
 /* Page Header */
 .hero h1 {
-  @apply mb-0 inline-block text-4xl leading-tight tracking-tight md:text-6xl;
+  @apply mb-0 font-normal text-4xl md:text-6xl;
   strong {
-    @apply bg-gradient-to-tr from-fuchsia-800 via-indigo-800 to-teal-500 bg-clip-text text-transparent;
+    @apply text-brandRust font-normal;
+  }
+}
+.component-banner_with_caption h2 {
+  @apply mb-0 font-normal  text-3xl md:text-5xl;
+  strong {
+    @apply text-brandRust font-normal;
+  }
+}
+
+.component-hero h2 {
+  @apply mb-0 font-normal  text-3xl md:text-5xl;
+  strong {
+    @apply text-brandCream font-normal;
   }
 }
 
 .indicator {
-  @apply transition duration-500 ease-in-out;
+  @apply transition duration-300 ease-in-out;
 }
 details[open] .indicator,
 button[aria-expanded='true'] .indicator {

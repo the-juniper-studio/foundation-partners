@@ -9,7 +9,7 @@ const Image = ({ slice }) => {
   return (
     <section className='component-image_gallery mx-auto w-full max-w-screen-xl px-3 md:px-6 py-10'>
       {slice.primary.gallery_name.text && (
-        <div className='prose prose-xl mb-10 max-w-none text-center dark:prose-invert'>
+        <div className='prose prose-xl mb-12 max-w-none text-center dark:prose-invert'>
           <PrismicRichText field={slice.primary.gallery_name.richText} />
         </div>
       )}

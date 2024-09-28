@@ -65,6 +65,7 @@ const createSlices = ({ createSlice }) => {
     { id: 'map', component: './src/components/map.js' },
     { id: 'posts', component: './src/components/posts.js' },
     { id: 'quote', component: './src/components/quote.js' },
+    { id: 'team', component: './src/components/team.js' },
     { id: 'text', component: './src/components/text.js' },
     { id: 'video', component: './src/components/video.js' }
   ]

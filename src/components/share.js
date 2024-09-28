@@ -28,8 +28,8 @@ const Share = ({ link, image, title }) => {
       default:
     }
   }
-  const linkStyle = 'flex flex-row items-center gap-2 p-2 lg:pr-3 rounded bg-slate-50 dark:bg-slate-900 dark:border-slate-800 hover:dark:bg-slate-800 hover:bg-white shadow border group'
-  const iconStyle = 'h-8 w-8 group-hover:opacity-80'
+  const linkStyle = 'flex flex-row items-center gap-2 p-2 rounded bg-white shadow-sm border shadow-neutral-800 group'
+  const iconStyle = 'h-8 w-8 group-hover:opacity-50 group-hover:scale-125 transition ease-in-out transform duration-300'
 
   return (
     <div className='relative'>
@@ -43,7 +43,7 @@ const Share = ({ link, image, title }) => {
               link,
               title
             })}>
-            <LinkedIn alt='LinkedIn' aria-hidden='true' className={`${iconStyle} text-[#0288D1]`} />
+            <LinkedIn alt='LinkedIn' aria-hidden='true' className={`${iconStyle}`} />
             <span className='sr-only'>Share to LinkedIn</span>
           </button>
           <button
@@ -53,7 +53,7 @@ const Share = ({ link, image, title }) => {
               link,
               title
             })}>
-            <Twitter alt='twitter' aria-hidden='true' className={`${iconStyle} text-[#38a1f3]`} />
+            <Twitter alt='twitter' aria-hidden='true' className={`${iconStyle}`} />
             <span className='sr-only'>Share on Twitter</span>
           </button>
           <button
@@ -63,7 +63,7 @@ const Share = ({ link, image, title }) => {
               link,
               title
             })}>
-            <Whatsapp alt='Whatsapp' aria-hidden='true' className={`${iconStyle} text-[#25D366]`} />
+            <Whatsapp alt='Whatsapp' aria-hidden='true' className={`${iconStyle}`} />
             <span className='sr-only'>Share via Whatsapp</span>
           </button>
           <button
@@ -73,7 +73,7 @@ const Share = ({ link, image, title }) => {
               link,
               title
             })}>
-            <Sms alt='SMS' aria-hidden='true' className={`${iconStyle} text-neutral-700`} />
+            <Sms alt='SMS' aria-hidden='true' className={`${iconStyle}`} />
             <span className='sr-only'>Send by SMS</span>
           </button>
         </div>

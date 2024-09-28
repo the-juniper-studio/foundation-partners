@@ -5,8 +5,8 @@ import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css'
 
 const Video = ({ slice }) => {
   if (slice.video_url === null && slice.primary.video_url === null) return null
-  let embed = slice.primary?.video.embed_url || slice.video_url.embed_url
-  let title = slice.primary?.video.title || slice.video_url.title
+  let embed = slice.primary?.video?.embed_url || slice.video_url?.embed_url
+  let title = slice.primary?.video?.title || slice.video_url?.title
 
   if (embed?.includes('watch')) {
     embed = embed.split('v=')[1]

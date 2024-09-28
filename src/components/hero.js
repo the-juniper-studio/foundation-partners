@@ -13,10 +13,10 @@ const Hero = ({ slice }) => {
       )}
       <div className='hero col-span-full row-span-full flex w-full flex-col items-center text-center justify-center gap-6 px-3 md:px-6 md:mx-auto md:max-w-screen-xl py-20'>
         <div className='prose prose-xl relative md:max-w-screen-md'>
-          <PrismicRichText field={slice.primary.title.richText} />
+          {slice.primary.title.text && <PrismicRichText field={slice.primary.title.richText} />}
           <PrismicRichText field={slice.primary.text.richText} />
         </div>
-        <PrismicLink className='button' field={slice.primary.button_link}>
+        <PrismicLink className='button text-brandMustard' field={slice.primary.button_link}>
           {slice.primary.button_text}
         </PrismicLink>
       </div>

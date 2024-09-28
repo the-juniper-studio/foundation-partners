@@ -80,7 +80,7 @@ const EmblaCarousel = ({ arrows, autoPlay, children, delayLength, dots, loop, ta
               })}
             </div>
           ) : (
-            <div className='bg-slate-300 flex items-center p-1 rounded-full'>
+            <div className='bg-neutral-300 flex items-center p-1 rounded-full'>
               {scrollSnaps.map((_, index) => (
                 <EmblaDots key={index} selected={index === selectedIndex} onClick={() => scrollTo(index)} />
               ))}

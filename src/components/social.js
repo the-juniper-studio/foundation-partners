@@ -32,7 +32,7 @@ const Social = (props) => {
             <span className='sr-only'>Visit us on {social_network}</span>
             {social_network?.toLowerCase() === 'facebook' && <Facebook className='h-8' aria-hidden='true' />}
             {social_network?.toLowerCase() === 'instagram' && <Instagram className='h-8' aria-hidden='true' />}
-            {social_network?.toLowerCase() === 'linkedin' && <LinkedIn className='h-8 text-[#0288D1]' aria-hidden='true' />}
+            {social_network?.toLowerCase() === 'linkedin' && <LinkedIn className='h-8' aria-hidden='true' />}
             {social_network?.toLowerCase() === 'tiktok' && <Tiktok className='h-8' aria-hidden='true' />}
             {social_network?.toLowerCase() === 'twitter' && <Twitter className='h-8' aria-hidden='true' />}
             {social_network?.toLowerCase() === 'whatsapp' && <Whatsapp className='h-8' aria-hidden='true' />}

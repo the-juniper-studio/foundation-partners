@@ -10,6 +10,7 @@
     "@prismicio/react": "^2.7.1",
     "embla-carousel-autoplay": "^8.0.0-rc03",
     "embla-carousel-react": "^8.0.0-rc03",
+    "framer-motion": "^11.9.0",
     "gatsby": "^5.13.6",
     "gatsby-plugin-gdpr-cookies": "^2.0.8",
     "gatsby-plugin-image": "^3.1.0",

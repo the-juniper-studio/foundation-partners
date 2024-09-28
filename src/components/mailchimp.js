@@ -50,11 +50,11 @@ const Mailchimp = ({ lang }) => {
   const config = data.prismicConfig.data
 
   const inputStyles =
-    'w-full appearance-none rounded-lg py-4 px-6 text-left text-base leading-tight text-slate-800 placeholder-slate-500 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-brand-blue'
+    'w-full appearance-none rounded-lg py-4 px-6 text-left text-base leading-tight text-neutral-800 placeholder-neutral-500 placeholder-neutral-500 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-brand-blue'
   return (
     <>
       {!message && !error && (
-        <div className='relative z-10 mx-auto -mt-20 grid max-w-screen-xl border-b border-slate-600 p-6 print:hidden md:pb-10 lg:flex lg:space-x-12'>
+        <div className='relative z-10 mx-auto -mt-20 grid max-w-screen-xl border-b border-neutral-600 p-6 print:hidden md:pb-10 lg:flex lg:space-x-12'>
           <div className='bg-brand-blue mx-auto w-full max-w-screen-xl rounded-3xl px-6 py-10 sm:px-12 sm:py-16 lg:flex lg:items-center lg:p-16'>
             <div className='lg:w-0 lg:flex-1'>
               <PrismicRichText field={config.mailchimp_title?.richText} />

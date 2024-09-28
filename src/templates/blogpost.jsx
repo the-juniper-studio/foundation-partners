@@ -35,7 +35,7 @@ const BlogpostTemplate = ({ data, location }) => {
             {authorData.image.gatsbyImageData && <GatsbyImage className='h-16 w-16 rounded-lg shadow lg:h-20 lg:w-20' image={getImage(authorData.image)} alt={authorData.image.alt || ''} />}
             <div>
               {' '}
-              <p className='text-base font-semibold mb-1'>
+              <p className='text-base font-medium mb-1'>
                 {authorData.name}
                 {authorData.position && (
                   <>
@@ -45,7 +45,7 @@ const BlogpostTemplate = ({ data, location }) => {
                 )}
               </p>
               {publishDate && (
-                <p className='text-slate-500 text-sm'>
+                <p className='text-neutral-500 text-sm'>
                   <span>{publishDate}</span>
                   {timeToRead && (
                     <>

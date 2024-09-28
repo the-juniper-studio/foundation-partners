@@ -17,11 +17,11 @@ const PageHeader = ({ authorData, type, pageData, publishDate }) => {
   const timeToRead = type === 'blogpost' && publishDate ? Math.ceil(pageData.page_text?.text.split(' ').length / 200) : null
 
   return (
-    <div className='relative grid min-h-[15vh] grid-cols-1 grid-rows-1 overflow-hidden bg-brandCream dark:bg-slate-900'>
+    <div className='relative grid min-h-[15vh] grid-cols-1 grid-rows-1 overflow-hidden bg-brandCream dark:bg-brandBlack'>
       {images && (
         <div className='absolute inset-0'>
           <GatsbyImage className='absolute inset-0 h-full bg-cover' layout='fullWidth' loading='eager' image={images} alt={pageData.page_image.alt || ''} />
-          <div className='absolute inset-0 z-0 bg-gradient-to-tr from-white to-transparent opacity-90 dark:from-slate-900' />
+          <div className='absolute inset-0 z-0 bg-gradient-to-tr from-white to-transparent opacity-90 dark:from-brandBlack' />
         </div>
       )}
       <div className='hero relative col-span-full w-full row-span-full mx-auto flex flex-col justify-center gap-6 px-3 md:px-6 pb-10 pt-32 lg:pt-48 md:max-w-screen-xl md:text-2xl'>

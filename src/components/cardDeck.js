@@ -3,6 +3,7 @@ import { PrismicRichText } from '@prismicio/react'
 
 // Components
 import Card from './card'
+import { FadeInStagger } from './fadeIn'
 
 const CardDeck = ({ slice }) => {
   var grid = 'md:grid-cols-2 max-w-screen-lg mx-auto'
@@ -15,15 +16,17 @@ const CardDeck = ({ slice }) => {
   return (
     <section className='component-card_deck mx-auto w-full max-w-screen-xl px-3 md:px-6 py-10'>
       {slice.primary.title.text && (
-        <div className='prose mb-10 max-w-screen-md mx-auto text-center dark:prose-invert lg:prose-lg'>
+        <div className='prose mb-12 max-w-screen-md mx-auto text-center dark:prose-invert lg:prose-lg'>
           <PrismicRichText field={slice.primary.title.richText} />
         </div>
       )}
-      <ul className={`grid grid-cols-1 gap-4 ${grid}`}>
-        {slice.items.map((card, index) => {
-          return <Card fields={card} key={`card-${index}`} />
-        })}
-      </ul>
+      <FadeInStagger duration='.5'>
+        <ul className={`grid grid-cols-1 gap-4 ${grid}`}>
+          {slice.items.map((card, index) => {
+            return <Card fields={card} key={`card-${index}`} />
+          })}
+        </ul>
+      </FadeInStagger>
     </section>
   )
 }

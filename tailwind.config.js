@@ -15,11 +15,13 @@ module.exports = {
         brandPink: '#ffc2c2',
         brandPeach: '#ffdbbe',
         brandMustard: '#dead2b',
-        brandCream: '#fff6ed'
+        brandCream: '#fff6ed',
+        brandBlack: '#010101'
       },
       typography: (theme) => ({
         DEFAULT: {
           css: {
+            '--tw-prose-body': theme('colors.brandBlack'),
             '--tw-prose-bullets': theme('colors.brandRust'),
             // '--tw-prose-headings': theme('colors.indigo.800'),
             // '--tw-prose-links': theme('colors.fuchsia.800'),
@@ -36,6 +38,11 @@ module.exports = {
             strong: {
               color: 'inherit'
             },
+            h1: { fontWeight: '500' },
+            h2: { fontWeight: '500' },
+            h3: { fontWeight: '500' },
+            h4: { fontWeight: '500' },
+            h5: { fontWeight: '500' },
             ul: {
               '> li': {
                 '&::before': {

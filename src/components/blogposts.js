@@ -20,7 +20,7 @@ export const query = graphql`
 const Blogposts = ({ data, slice }) => {
   return (
     <section className='component-blogposts mx-auto w-full max-w-screen-xl px-3 md:px-6 py-10'>
-      <div className='prose mb-10 max-w-none text-center dark:prose-invert lg:prose-xl'>
+      <div className='prose mb-12 max-w-none text-center dark:prose-invert lg:prose-xl'>
         <PrismicRichText field={slice.primary.title.richText} />
       </div>
       <ul className='grid grid-cols-1 gap-6 md:grid-cols-3 md:gap-12'>
