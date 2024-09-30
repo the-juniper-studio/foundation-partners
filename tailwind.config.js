@@ -32,6 +32,7 @@ module.exports = {
             // '--tw-prose-invert-links': theme('colors.white'),
             a: {
               textDecoration: 'underline',
+              textUnderlineOffset: '4px',
               '&:hover': {
                 textDecoration: 'none'
               }
