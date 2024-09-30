@@ -13,7 +13,7 @@ const Card = ({ fields }) => {
           </div>
         )}
         <div className='m-4 flex flex-grow flex-col gap-4'>
-          <div className='prose max-w-none lg:prose-lg'>
+          <div className='prose max-w-none lg:prose-lg dark:prose-invert'>
             <PrismicRichText field={fields.title.richText} />
             <PrismicRichText field={fields.text.richText} />
           </div>

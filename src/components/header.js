@@ -27,7 +27,7 @@ const Header = ({ altLangs, lang }) => {
 
   // Tidy?
   const navStyles =
-    'flex w-full flex-row justify-between items-center p-4 text-brandBlack transition duration-150 ease-in-out hover:text-brandRust focus:text-brandBlack hover:underline hover:underline-offset-4'
+    'flex w-full flex-row justify-between items-center p-4 text-brandBlack transition duration-150 ease-in-out hover:text-brandRust focus:text-brandBlack hover:underline hover:underline-offset-4 dark:text-brandCream dark:hover:text-brandMustard'
   const subNavStyles = 'block py-4 px-6 text-brandBlack transition duration-150 ease-in-out hover:text-brandRust focus:text-brandBlack'
 
   return (
@@ -54,7 +54,7 @@ const Header = ({ altLangs, lang }) => {
                       </Dropdown>
                     ) : (
                       <li key={`nav-${index}`}>
-                        <PrismicLink className={navStyles} field={nav.primary.link} activeClassName='underline underline-offset-4'>
+                        <PrismicLink className={navStyles} field={nav.primary.link} activeClassName='underline underline-offset-4 dark:text-brandMustard'>
                           {nav.primary.label}
                         </PrismicLink>
                       </li>

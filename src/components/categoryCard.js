@@ -17,7 +17,7 @@ const CategoryCard = ({ item }) => {
     <li className='component-card ease relative flex transform flex-col overflow-hidden border-t-2 border-brandBlack group'>
       <PrismicLink className='flex flex-1 flex-col' href={item.node.url}>
         <div className='flex flex-1 flex-col my-6 lg:mb-12'>
-          <div className='mb-6 space-y-4 prose lg:prose-xl'>
+          <div className='mb-6 space-y-4 prose lg:prose-xl dark:prose-invert'>
             <h3 className='group-hover:text-brandRust'>{itemData.page_title.text}</h3>
             <div className='mb-6 mt-3'>
               {itemData.page_text.text.split(' ').slice(0, 20).join(' ')}
@@ -31,7 +31,7 @@ const CategoryCard = ({ item }) => {
               </div>
               <div>
                 <p className='font-medium'>{authorData.name}</p>
-                <div className='flex space-x-1 text-sm text-neutral-500'>
+                <div className='flex space-x-1 text-sm text-neutral-500 dark:text-neutral-300'>
                   {publishDate} &middot; {timeToRead} min read
                 </div>
               </div>

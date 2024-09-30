@@ -19,7 +19,7 @@ const CategoryList = ({ item }) => {
               <p className='font-medium'>{authorData.name}</p>
 
               <div className='flex flex-col items-start'>
-                <time dateTime={publishDate} className='text-neutral-500'>
+                <time dateTime={publishDate} className='text-neutral-500 dark:text-neutral-300'>
                   {publishDate}
                 </time>
               </div>

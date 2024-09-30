@@ -45,7 +45,7 @@ const BlogpostTemplate = ({ data, location }) => {
                 )}
               </p>
               {publishDate && (
-                <p className='text-neutral-500 text-sm'>
+                <p className='text-neutral-500 text-sm dark:text-neutral-300'>
                   <span>{publishDate}</span>
                   {timeToRead && (
                     <>
@@ -68,7 +68,7 @@ const BlogpostTemplate = ({ data, location }) => {
           <div className='top-3 flex flex-col gap-12 lg:sticky bottom-3'>
             <Share title={pageData.page_title.text} link={page.url} image={pageData.page_image} />
             <div>
-              <div className='prose mb-3 lg:mb-6'>
+              <div className='prose mb-3 lg:mb-6 dark:prose-invert'>
                 <h2>Related articles</h2>
               </div>
               <Slice alias='posts' id={data.prismicBlogpost?.id} layout='list' type={page.type} />
