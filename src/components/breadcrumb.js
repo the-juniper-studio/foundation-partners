@@ -26,13 +26,7 @@ const Breadcrumb = ({ location, title }) => {
       <ol className='mx-auto flex w-full max-w-screen-xl items-center space-x-3 px-3 md:px-6 text-sm' itemScope itemType='https://schema.org/BreadcrumbList'>
         <li itemProp='itemListElement' itemScope itemType='https://schema.org/ListItem'>
           <div>
-            <Link
-              to='/'
-              className='flex items-center justify-center rounded-full hover:bg-neutral-400 hover:text-white'
-              itemScope
-              itemType='https://schema.org/WebPage'
-              itemProp='item'
-              itemID={`${location.origin}${fullPath}`}>
+            <Link to='/' className='flex items-center justify-center hover:text-brandRust' itemScope itemType='https://schema.org/WebPage' itemProp='item' itemID={`${location.origin}${fullPath}`}>
               <Home className='h-5 w-5 flex-shrink-0' />
               <span className='sr-only' itemProp='name'>
                 Home
@@ -48,13 +42,13 @@ const Breadcrumb = ({ location, title }) => {
             <li key={`url-${index}`} className='mr-1' itemProp='itemListElement' itemScope itemType='https://schema.org/ListItem'>
               <div className='flex items-center'>
                 {splitUrl.length === index + 1 ? (
-                  <span aria-current='page' className='leading-normal line-clamp-1'>
-                    {title}
+                  <span aria-current='page' className=''>
+                    {title} <PrettyPath path={path} />
                   </span>
                 ) : (
                   <Link
                     to={fullPath}
-                    className='flex font-medium leading-normal underline underline-offset-2 hover:no-underline'
+                    className='flex font-medium underline underline-offset-2 hover:no-underline'
                     itemScope
                     itemType='https://schema.org/WebPage'
                     itemProp='item'
