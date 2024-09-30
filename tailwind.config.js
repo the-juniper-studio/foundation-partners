@@ -12,9 +12,9 @@ module.exports = {
       },
       colors: {
         brandRust: '#dc6747',
-        brandPink: '#ffc2c2',
+        brandPink: '#ffc3c3',
         brandPeach: '#ffdbbe',
-        brandMustard: '#dead2b',
+        brandMustard: '#dead2c',
         brandCream: '#fff6ed',
         brandBlack: '#010101'
       },
