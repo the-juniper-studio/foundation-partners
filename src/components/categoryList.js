@@ -6,7 +6,6 @@ const CategoryList = ({ item }) => {
   const authorData = itemData.author?.document.data
   const publishDate = item.node.first_publication_date_formatted
 
-  console.log(item)
   return (
     <li className='space-y-10 group border-t-2 border-brandBlack pt-3'>
       <PrismicLink href={item.node.url} className='flex'>

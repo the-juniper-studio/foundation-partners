@@ -3,6 +3,7 @@ import { Link } from 'gatsby'
 
 // SVGs
 import Home from './svg/home'
+import ChevronRight from './svg/chevronRight'
 
 const PrettyPath = ({ path }) => {
   let pretty = path.replace(new RegExp('-', 'g'), ' ')
@@ -14,14 +15,15 @@ const PrettyPath = ({ path }) => {
   )
 }
 
-const Breadcrumb = ({ location }) => {
+const Breadcrumb = ({ location, title }) => {
   var splitUrl = location.pathname.split('/')
   splitUrl = splitUrl.filter(Boolean)
   var fullPath = ''
   if (location.pathname === '/') return null
+
   return (
     <nav className='z-20 w-full py-3' aria-label='Breadcrumb'>
-      <ol className='mx-auto flex w-full max-w-screen-xl items-center space-x-3 px-3 md:px-6' itemScope itemType='https://schema.org/BreadcrumbList'>
+      <ol className='mx-auto flex w-full max-w-screen-xl items-center space-x-3 px-3 md:px-6 text-sm' itemScope itemType='https://schema.org/BreadcrumbList'>
         <li itemProp='itemListElement' itemScope itemType='https://schema.org/ListItem'>
           <div>
             <Link
@@ -43,21 +45,22 @@ const Breadcrumb = ({ location }) => {
           fullPath = fullPath + '/' + path
           let position = index + 2
           return (
-            <li key={`url-${index}`} className='mr-1 inline-block' itemProp='itemListElement' itemScope itemType='https://schema.org/ListItem'>
+            <li key={`url-${index}`} className='mr-1' itemProp='itemListElement' itemScope itemType='https://schema.org/ListItem'>
               <div className='flex items-center'>
                 {splitUrl.length === index + 1 ? (
-                  <span aria-current='page' className='inline-block text-sm leading-normal lg:text-base'>
-                    <PrettyPath path={path} />
+                  <span aria-current='page' className='leading-normal line-clamp-1'>
+                    {title}
                   </span>
                 ) : (
                   <Link
                     to={fullPath}
-                    className='inline-block border-r pr-3 text-sm font-medium leading-normal underline underline-offset-2 hover:text-neutral-400 hover:no-underline lg:text-base'
+                    className='flex font-medium leading-normal underline underline-offset-2 hover:no-underline'
                     itemScope
                     itemType='https://schema.org/WebPage'
                     itemProp='item'
                     itemID={`${location.origin}${fullPath}`}>
                     <PrettyPath path={path} />
+                    <ChevronRight className='w-3 ml-3' />
                   </Link>
                 )}
               </div>
