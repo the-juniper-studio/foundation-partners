@@ -23,9 +23,9 @@ module.exports = {
           css: {
             '--tw-prose-body': theme('colors.brandBlack'),
             '--tw-prose-bullets': theme('colors.brandRust'),
-            // '--tw-prose-headings': theme('colors.indigo.800'),
+            '--tw-prose-headings': theme('colors.brandBlack'),
             '--tw-prose-counters': theme('colors.brandMustard'),
-            // '--tw-prose-links': theme('colors.fuchsia.800'),
+            '--tw-prose-links': theme('colors.brandRust'),
             '--tw-prose-invert-body': theme('colors.white'),
             '--tw-prose-invert-bullets': theme('colors.brandRust'),
             // '--tw-prose-invert-headings': theme('color.blue.50'),
