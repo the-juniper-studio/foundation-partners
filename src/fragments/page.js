@@ -163,7 +163,7 @@ export const pageQuery = graphql`
             image {
               alt
               copyright
-              gatsbyImageData
+              gatsbyImageData(imgixParams: { monochrome: "dead2b" })
             }
             text {
               richText
