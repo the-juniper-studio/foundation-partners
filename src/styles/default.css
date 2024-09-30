@@ -122,7 +122,7 @@ h6 {
 }
 details[open] .indicator,
 button[aria-expanded='true'] .indicator {
-  @apply rotate-180 transform;
+  @apply rotate-90 transform;
 }
 summary::-webkit-details-marker {
   display: none;
@@ -141,14 +141,14 @@ summary::-webkit-details-marker {
   z-index: 10;
 }
 .component-counter {
-  .counter-0 .number {
-    @apply text-indigo-900 dark:text-indigo-200;
+  .counter-0 {
+    @apply text-brandRust;
   }
-  .counter-1 .number {
-    @apply text-indigo-800 dark:text-indigo-300;
+  .counter-1 {
+    @apply text-brandRust;
   }
-  .counter-2 .number {
-    @apply text-indigo-700 dark:text-indigo-400;
+  .counter-2 {
+    @apply text-brandRust;
   }
 }
 
