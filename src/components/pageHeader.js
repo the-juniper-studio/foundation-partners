@@ -29,9 +29,11 @@ const PageHeader = ({ authorData, type, pageData, publishDate }) => {
         {!article && (
           <>
             <PrismicRichText field={pageData.page_text.richText} />
-            <PrismicLink className='button' field={pageData.page_button_link}>
-              {pageData.page_button_text}
-            </PrismicLink>
+            <div>
+              <PrismicLink className='button' field={pageData.page_button_link}>
+                {pageData.page_button_text}
+              </PrismicLink>
+            </div>
           </>
         )}
 
