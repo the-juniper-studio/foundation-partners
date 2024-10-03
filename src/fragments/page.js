@@ -206,6 +206,32 @@ export const pageQuery = graphql`
             }
           }
         }
+        ... on PrismicPageDataBodyPartnerLogos {
+          id
+          slice_type
+          primary {
+            title {
+              richText
+            }
+          }
+          items {
+            link {
+              isBroken
+              link_type
+              tags
+              target
+              type
+              uid
+              url
+              id
+            }
+            logo {
+              alt
+              copyright
+              gatsbyImageData(height: 70, layout: FIXED)
+            }
+          }
+        }
         ... on PrismicPageDataBodyQuote {
           id
           slice_type
@@ -334,12 +360,7 @@ export const pageQuery = graphql`
         alt
         copyright
         gatsbyImageData(layout: FULL_WIDTH)
-        thumbnails {
-          mobile {
-            gatsbyImageData(layout: FULL_WIDTH)
-          }
-        }
-        url(imgixParams: { w: 1200, h: 630, fit: "crop" })
+        url
       }
       page_text {
         richText

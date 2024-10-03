@@ -31,10 +31,10 @@ const Header = ({ altLangs, lang }) => {
   const subNavStyles = 'block py-4 px-6 text-brandBlack transition duration-150 ease-in-out hover:text-brandRust focus:text-brandBlack'
 
   return (
-    <header role='banner' className='absolute left-0 right-0 top-0 z-20 text-white text-3xl md:text-base'>
-      <nav className='relative mx-auto flex max-w-screen-xl items-center gap-6 px-3 md:px-6 py-4'>
+    <header role='banner' className='z-20 text-white text-3xl md:text-base'>
+      <nav className='relative mx-auto flex max-w-screen-xl items-center gap-6 px-3 md:p-6 py-4 justify-between'>
         <Link to='/' className='z-20 flex'>
-          <GatsbyImage className='w-40 lg:w-60 object-contain' placeholder='none' loading='eager' image={getImage(config.company_logo)} alt={config.company_display_name} />
+          <GatsbyImage className='w-40 lg:w-52 object-contain' placeholder='none' loading='eager' image={getImage(config.company_logo)} alt={config.company_display_name} />
         </Link>
         <span className='z-20 ml-auto md:hidden'>
           <Hamburger color='#dc6747' label='Show menu' rounded toggled={isOpen} toggle={setOpen} />
@@ -42,7 +42,7 @@ const Header = ({ altLangs, lang }) => {
         <div
           className={`${
             !isOpen ? 'hidden' : 'fixed inset-0 z-10 flex h-screen flex-1 flex-col justify-start bg-brandPink bg-opacity-50'
-          } backdrop-blur-sm md:relative md:flex md:h-auto md:w-full md:flex-row md:bg-transparent md:ml-auto`}>
+          } md:relative md:flex md:h-auto md:flex-row md:bg-transparent md:mr-0`}>
           <div className='max-h-screen overflow-y-scroll rounded bg-brandPink shadow-md md:max-h-none md:overflow-visible md:rounded-none md:bg-transparent md:shadow-none'>
             <ul className='relative flex-row items-center pt-24 md:flex md:pt-0'>
               {headerData.nav.map((nav, index) => {

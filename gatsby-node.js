@@ -63,6 +63,7 @@ const createSlices = ({ createSlice }) => {
     { id: 'hero', component: './src/components/hero.js' },
     { id: 'image', component: './src/components/image.js' },
     { id: 'map', component: './src/components/map.js' },
+    { id: 'partners', component: './src/components/partners.js' },
     { id: 'posts', component: './src/components/posts.js' },
     { id: 'quote', component: './src/components/quote.js' },
     { id: 'team', component: './src/components/team.js' },

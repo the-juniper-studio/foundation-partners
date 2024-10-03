@@ -12,6 +12,7 @@ const components = {
   hero: ({ slice }) => <Slice alias='hero' slice={slice} />,
   image_gallery: ({ slice }) => <Slice alias='image' slice={slice} />,
   map: ({ slice }) => <Slice alias='map' slice={slice} />,
+  partner_logos: ({ slice }) => <Slice alias='partners' slice={slice} />,
   posts: ({ slice }) => <Slice allowEmpty alias='posts' slice={slice} />,
   quote: ({ slice }) => <Slice alias='quote' slice={slice} />,
   team: ({ slice }) => <Slice alias='team' slice={slice} />,

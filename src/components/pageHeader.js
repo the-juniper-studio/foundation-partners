@@ -1,17 +1,9 @@
 import React from 'react'
 import { PrismicLink, PrismicRichText } from '@prismicio/react'
-import { GatsbyImage, getImage, withArtDirection } from 'gatsby-plugin-image'
+import { GatsbyImage, getImage, StaticImage } from 'gatsby-plugin-image'
 
 const PageHeader = ({ authorData, type, pageData, publishDate }) => {
   let images = pageData.page_image?.gatsbyImageData
-  if (pageData.page_image.thumbnails.mobile.gatsbyImageData) {
-    images = withArtDirection(getImage(pageData.page_image.gatsbyImageData), [
-      {
-        media: '(max-width: 768px)',
-        image: getImage(pageData.page_image.thumbnails.mobile.gatsbyImageData)
-      }
-    ])
-  }
 
   const article = type === 'blogpost'
   const timeToRead = type === 'blogpost' && publishDate ? Math.ceil(pageData.page_text?.text.split(' ').length / 200) : null
@@ -19,12 +11,13 @@ const PageHeader = ({ authorData, type, pageData, publishDate }) => {
   return (
     <div className='relative grid min-h-[15vh] grid-cols-1 grid-rows-1 overflow-hidden bg-brandCream dark:bg-brandBlack'>
       {images && (
-        <div className='absolute inset-0'>
-          <GatsbyImage className='absolute inset-0 h-full bg-cover' layout='fullWidth' loading='eager' image={images} alt={pageData.page_image.alt || ''} />
-          <div className='absolute inset-0 z-0 bg-gradient-to-tr from-white to-transparent opacity-90 dark:from-brandBlack' />
+        <div className='relative'>
+          <GatsbyImage className='absolute right-0 top-0 bottom-0 w-2/3' layout='fullWidth' loading='eager' image={images} alt={pageData.page_image.alt || ''} />
+          <StaticImage className='relative mt-1 ml-1 w-full' src='../images/hero-svg.png' alt='Hero overlay' />
         </div>
       )}
-      <div className='hero relative col-span-full w-full row-span-full mx-auto flex flex-col justify-center gap-6 px-3 md:px-6 pb-6 lg:pb-12 pt-32 lg:pt-48 md:max-w-screen-xl md:text-2xl'>
+      <div
+        className={`hero col-span-full w-full row-span-full mx-auto flex flex-col justify-center gap-6 px-3 md:px-6 pb-6 lg:py-12 md:max-w-screen-xl md:text-2xl ${images ? 'pt-32 lg:pt-48 md:absolute inverted md:w-1/2 relative' : 'relative'}`}>
         <PrismicRichText field={pageData.page_title.richText} />
         {!article && (
           <>
