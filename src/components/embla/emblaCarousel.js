@@ -3,7 +3,7 @@ import { PrevButton, NextButton, EmblaDots, EmblaTabs, EmblaThumbs } from './emb
 import useEmblaCarousel from 'embla-carousel-react'
 import Autoplay from 'embla-carousel-autoplay'
 
-const EmblaCarousel = ({ arrows, autoPlay, children, delayLength, dots, loop, tabs, slice, slidesToScroll, thumbs }) => {
+const EmblaCarousel = ({ arrows, autoPlay, children, delayLength, controls, loop, tabs, slice, slidesToScroll, thumbs }) => {
   const options = {
     loop,
     slidesToScroll: slidesToScroll || 1,
@@ -72,27 +72,29 @@ const EmblaCarousel = ({ arrows, autoPlay, children, delayLength, dots, loop, ta
         <div className='overflow-hidden' ref={emblaRef}>
           <div className='flex w-full'>{children}</div>
         </div>
-        <div className='controls justify-between flex mt-2'>
-          {thumbs && items ? (
-            <div className='grid grid-cols-5 gap-2 sm:grid-cols-6 md:grid-cols-8 lg:grid-cols-12'>
-              {items.map((snap, index) => {
-                return <EmblaThumbs selected={index === selectedIndex} onClick={() => scrollTo(index)} key={index} image={snap?.image} video={snap?.video} />
-              })}
-            </div>
-          ) : (
-            <div className='bg-neutral-300 flex items-center p-1 rounded-full'>
-              {scrollSnaps.map((_, index) => (
-                <EmblaDots key={index} selected={index === selectedIndex} onClick={() => scrollTo(index)} />
-              ))}
-            </div>
-          )}
-          {arrows && (
-            <div className='flex gap-2 ml-2'>
-              <PrevButton onClick={scrollPrev} enabled={prevBtnEnabled} />
-              <NextButton onClick={scrollNext} enabled={nextBtnEnabled} />
-            </div>
-          )}
-        </div>
+        {controls && (
+          <div className='controls justify-between flex mt-2'>
+            {thumbs && items ? (
+              <div className='grid grid-cols-5 gap-2 sm:grid-cols-6 md:grid-cols-8 lg:grid-cols-12'>
+                {items.map((snap, index) => {
+                  return <EmblaThumbs selected={index === selectedIndex} onClick={() => scrollTo(index)} key={index} image={snap?.image} video={snap?.video} />
+                })}
+              </div>
+            ) : (
+              <div className='bg-neutral-300 flex items-center p-1 rounded-full'>
+                {scrollSnaps.map((_, index) => (
+                  <EmblaDots key={index} selected={index === selectedIndex} onClick={() => scrollTo(index)} />
+                ))}
+              </div>
+            )}
+            {arrows && (
+              <div className='flex gap-2 ml-2'>
+                <PrevButton onClick={scrollPrev} enabled={prevBtnEnabled} />
+                <NextButton onClick={scrollNext} enabled={nextBtnEnabled} />
+              </div>
+            )}
+          </div>
+        )}
       </div>
     </div>
   )

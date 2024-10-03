@@ -5,7 +5,7 @@ import { PrismicRichText } from '@prismicio/react'
 
 const Logo = ({ partner }) => {
   return (
-    <div className='transform translate ease duration-200 hover:scale-105'>
+    <div className='transform translate ease duration-200 group-hover:scale-105'>
       <GatsbyImage image={partner.logo.gatsbyImageData} alt={partner.logo.alt || ''} placeholder='tracedSVG' loading='eager' />
     </div>
   )
@@ -21,12 +21,12 @@ const Partners = ({ slice }) => {
           </div>
         )}
         <div className='flex flex-row flex-wrap sm:flex-nowrap justify-center items-center mt-10 gap-3'>
-          <EmblaCarousel autoplay={true} delayLength={4000} loop={true} slidesToScroll={2}>
+          <EmblaCarousel autoplay={true} delayLength={4000} loop={true} slidesToScroll={2} controls={false}>
             {slice.items.map((partner, index) => {
               return (
-                <div className='relative flex items-center p-6 md:px-12 dark:invert dark:grayscale' key={`partner-${index}`}>
+                <div className='relative flex items-center p-3 lg:px-6 dark:invert dark:grayscale' key={`partner-${index}`}>
                   {partner.link?.url ? (
-                    <a href={partner.link.url} rel='noopener noreferrer nofollow' target='_blank' aria-label='View company'>
+                    <a className='group' href={partner.link.url} rel='noopener noreferrer nofollow' target='_blank' aria-label='View company'>
                       <Logo partner={partner} />
                     </a>
                   ) : (
