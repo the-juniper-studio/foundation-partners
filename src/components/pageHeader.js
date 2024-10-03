@@ -13,11 +13,11 @@ const PageHeader = ({ authorData, type, pageData, publishDate }) => {
       {images && (
         <div className='relative'>
           <GatsbyImage className='absolute right-0 top-0 bottom-0 w-2/3' layout='fullWidth' loading='eager' image={images} alt={pageData.page_image.alt || ''} />
-          <StaticImage className='relative mt-1 ml-1 w-full' src='../images/hero-svg.png' alt='Hero overlay' />
+          <StaticImage className='relative w-full' src='../images/hero-svg.png' alt='Hero overlay' />
         </div>
       )}
       <div
-        className={`hero col-span-full w-full row-span-full mx-auto flex flex-col justify-center gap-6 px-3 md:px-6 pb-6 lg:py-12 md:max-w-screen-xl md:text-2xl ${images ? 'pt-32 lg:pt-48 md:absolute inverted md:w-1/2 relative' : 'relative'}`}>
+        className={`hero col-span-full w-full row-span-full mx-auto flex flex-col justify-center gap-6 px-3 py-6 lg:py-12 md:max-w-screen-xl md:text-2xl ${images ? 'md:pt-32 lg:pt-48 md:absolute inverted md:w-1/2 relative md:text-brandCream' : 'relative'}`}>
         <PrismicRichText field={pageData.page_title.richText} />
         {!article && (
           <>
