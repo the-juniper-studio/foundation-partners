@@ -11,7 +11,7 @@ const Quote = ({ slice }) => {
 
   return (
     <section className={`component-quote relative w-full  ${dark && 'bg-brandPeach'}`}>
-      <div className='mx-auto max-w-screen-lg px-3 py-12 md:px-6 md:py-12'>
+      <div className='mx-auto max-w-screen-lg px-12 py-12'>
         <blockquote className={`relative md:flex gap-6 md:flex-grow md:flex-col p-6 md:p-12 ${dark && 'bg-brandRust my-3 md:my-6'}`}>
           <div className={`relative text-3xl lg:text-4xl md:flex-grow text-center ${text}`}>
             <PrismicRichText field={slice.primary.quote.richText} />
