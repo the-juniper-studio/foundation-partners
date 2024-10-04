@@ -13,15 +13,15 @@ const Logo = ({ partner }) => {
 
 const Partners = ({ slice }) => {
   return (
-    <div className='bg-white dark:bg-gray-800'>
+    <div className='bg-brandCream'>
       <div className={`component-${slice.slice_type} mx-auto py-8 lg:py-20 relative`}>
         {slice.primary.title && (
           <div className='prose prose-lg dark:prose-invert text-center max-w-none px-8'>
             <PrismicRichText field={slice.primary.title.richText} />
           </div>
         )}
-        <div className='flex flex-row flex-wrap sm:flex-nowrap justify-center items-center mt-10 gap-3'>
-          <EmblaCarousel autoplay={true} delayLength={4000} loop={true} slidesToScroll={2} controls={false}>
+        <div className='relative flex flex-row flex-wrap sm:flex-nowrap justify-center items-center mt-10 gap-3'>
+          <EmblaCarousel autoplay={true} delayLength={3000} loop={true} slidesToScroll={2} controls={false}>
             {slice.items.map((partner, index) => {
               return (
                 <div className='relative flex items-center p-3 lg:px-6 dark:invert dark:grayscale' key={`partner-${index}`}>
@@ -36,6 +36,7 @@ const Partners = ({ slice }) => {
               )
             })}
           </EmblaCarousel>
+          <div className='bg-gradient-to-r from-5% to-brandCream from-brandCream via-transparent absolute to-95% inset-0'></div>
         </div>
       </div>
     </div>

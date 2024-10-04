@@ -101,10 +101,17 @@ h6 {
 }
 
 /* Page Header */
-.hero h1 {
-  @apply mb-0 font-normal text-4xl md:text-6xl;
-  strong:not(.inverted) {
-    @apply text-brandRust dark:text-brandMustard font-bold;
+.hero {
+  h1 {
+    @apply mb-0 font-normal text-4xl md:text-6xl;
+    strong {
+      @apply text-brandRust dark:text-brandMustard font-bold;
+    }
+  }
+  & .inverted {
+    h1 strong {
+      @apply text-white;
+    }
   }
 }
 .component-banner_with_caption h2 {
@@ -133,6 +140,13 @@ summary::-webkit-details-marker {
 }
 
 /* Card deck */
+.component-card_deck {
+  h2 {
+    @apply text-brandRust;
+  }
+  h3 {
+  }
+}
 .component-card .link:after {
   background-color: transparent;
   bottom: 0;

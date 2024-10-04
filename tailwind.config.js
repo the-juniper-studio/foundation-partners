@@ -26,7 +26,7 @@ module.exports = {
             '--tw-prose-headings': theme('colors.brandBlack'),
             '--tw-prose-counters': theme('colors.brandMustard'),
             '--tw-prose-links': theme('colors.brandRust'),
-            '--tw-prose-invert-body': theme('colors.white'),
+            '--tw-prose-invert-body': theme('colors.brandCream'),
             '--tw-prose-invert-bullets': theme('colors.brandRust'),
             '--tw-prose-invert-headings': theme('color.brandRust'),
             // '--tw-prose-invert-links': theme('colors.white'),

@@ -5,56 +5,65 @@ import { GatsbyImage, getImage, StaticImage } from 'gatsby-plugin-image'
 const PageHeader = ({ authorData, type, pageData, publishDate }) => {
   let images = pageData.page_image?.gatsbyImageData
 
+  console.log(pageData.page_image)
+
   const article = type === 'blogpost'
   const timeToRead = type === 'blogpost' && publishDate ? Math.ceil(pageData.page_text?.text.split(' ').length / 200) : null
 
   return (
-    <div className='relative grid min-h-[15vh] grid-cols-1 grid-rows-1 overflow-hidden bg-brandCream dark:bg-brandBlack'>
-      {images && (
-        <div className='absolute inset-0'>
-          <GatsbyImage className='absolute left-auto top-0 bottom-0 right-0 w-2/3 h-full' layout='fullWidth' loading='eager' image={images} alt={pageData.page_image.alt || ''} />
-          <StaticImage className='relative w-full' src='../images/hero-svg.png' alt='Hero overlay' />
-        </div>
-      )}
-      <div
-        className={`hero relative col-span-full row-span-full mx-auto flex flex-col items-center justify-center gap-6 px-10 py-32 text-center md:max-w-screen-md md:text-2xl ${images ? 'md:pt-32 lg:pt-48 inverted md:w-1/2 relative md:text-brandCream' : 'relative'}`}>
-        <PrismicRichText field={pageData.page_title.richText} />
-        {!article && (
-          <>
-            <PrismicRichText field={pageData.page_text.richText} />
-            <div>
-              <PrismicLink className='button' field={pageData.page_button_link}>
-                {pageData.page_button_text}
-              </PrismicLink>
-            </div>
-          </>
-        )}
-
-        {authorData && (
-          <div className='text-base'>
-            {authorData.image.gatsbyImageData && (
-              <GatsbyImage className='m-2 mx-auto h-16 w-16 rounded-lg border-2 border-white bg-white shadow lg:h-20 lg:w-20' image={getImage(authorData.image)} alt={authorData.image.alt || ''} />
-            )}
-            <p className='font-medium'>
-              {authorData.name}
-              {authorData.position && (
-                <>
-                  <span aria-hidden='true'> &middot; </span>
-                  <span> {authorData.position}</span>
-                </>
+    <div className='hero relative grid min-h-[15vh] grid-cols-1 grid-rows-1 overflow-hidden bg-brandCream dark:bg-brandBlack'>
+      <div className={`h-full px-3 md:p-6 w-full max-w-screen-xl mx-auto ${images ? 'grid md:grid-cols-2 md:gap-4 inverted text-brandCream ' : 'text-brandBlack '}`}>
+        <div className='z-10 flex flex-col items-center justify-center py-12 sm:pb-20 md:pb-32 lg:pb-48 sm:items-start sm:text-left space-y-8 text-center text-xl md:text-2xl'>
+          <PrismicRichText field={pageData.page_title.richText} />
+          {!article && (
+            <>
+              <PrismicRichText field={pageData.page_text.richText} />
+              {pageData.page_button_link && (
+                <div>
+                  <PrismicLink className='button' field={pageData.page_button_link}>
+                    {pageData.page_button_text}
+                  </PrismicLink>
+                </div>
               )}
-            </p>
-            {publishDate && (
-              <p>
-                <span>{publishDate}</span>
-                {timeToRead && (
+            </>
+          )}
+
+          {authorData && (
+            <div className='text-base'>
+              {authorData.image.gatsbyImageData && (
+                <GatsbyImage className='m-2 mx-auto h-16 w-16 rounded-lg border-2 border-white bg-white shadow lg:h-20 lg:w-20' image={getImage(authorData.image)} alt={authorData.image.alt || ''} />
+              )}
+              <p className='font-medium'>
+                {authorData.name}
+                {authorData.position && (
                   <>
                     <span aria-hidden='true'> &middot; </span>
-                    <span>{timeToRead} min read</span>
+                    <span> {authorData.position}</span>
                   </>
                 )}
               </p>
-            )}
+              {publishDate && (
+                <p>
+                  <span>{publishDate}</span>
+                  {timeToRead && (
+                    <>
+                      <span aria-hidden='true'> &middot; </span>
+                      <span>{timeToRead} min read</span>
+                    </>
+                  )}
+                </p>
+              )}
+            </div>
+          )}
+        </div>
+        {images && (
+          <div className='flex-1 z-0 images'>
+            <div className='absolute right-0 top-0 bottom-0 w-1/2'>
+              <GatsbyImage image={pageData.page_image.gatsbyImageData} className='mask relative overflow-hidden sm:object-fill h-full w-full' alt={pageData.page_image.alt} loading='eager' />
+            </div>
+            <div className='absolute inset-0'>
+              <StaticImage className='relative w-full' src='../images/hero-svg.png' alt='Hero overlay' />
+            </div>
           </div>
         )}
       </div>
