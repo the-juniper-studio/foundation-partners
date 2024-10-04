@@ -359,7 +359,7 @@ export const pageQuery = graphql`
       page_image {
         alt
         copyright
-        gatsbyImageData(layout: FULL_WIDTH)
+        gatsbyImageData
         url
       }
       page_text {

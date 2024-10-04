@@ -114,6 +114,11 @@ h6 {
     }
   }
 }
+.component_hero {
+  .gatsby-image-wrapper {
+    @apply absolute inset-0;
+  }
+}
 .component-banner_with_caption h2 {
   @apply mb-0 font-normal text-3xl md:text-5xl;
   strong {
