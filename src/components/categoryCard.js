@@ -14,7 +14,7 @@ const CategoryCard = ({ item }) => {
     timeToRead = Math.ceil(wordCount / wordsPerMinute)
   }
   return (
-    <li className='component-card ease relative flex transform flex-col overflow-hidden border-t-4 border-brandMustard group'>
+    <li className='component-card ease relative flex transform flex-col overflow-hidden border-b-4 border-brandMustard group'>
       <PrismicLink className='flex flex-1 flex-col' href={item.node.url}>
         <div className='flex flex-1 flex-col my-6 lg:mb-12'>
           <div className='mb-6 space-y-4 prose lg:prose-xl dark:prose-invert'>
@@ -24,20 +24,8 @@ const CategoryCard = ({ item }) => {
               &hellip;
             </div>
           </div>
-          {authorData && (
-            <div className='mt-auto flex'>
-              <div className='relative mr-3 flex-shrink-0'>
-                <GatsbyImage className='rounded-full h-10 w-10 bg-brandMustard' image={authorData.image.gatsbyImageData} alt={authorData.image.alt || ''} />
-              </div>
-              <div>
-                <p className='font-medium'>{authorData.name}</p>
-                <div className='flex space-x-1 text-sm text-neutral-500 dark:text-neutral-300'>
-                  {publishDate} &middot; {timeToRead} min read
-                </div>
-              </div>
-            </div>
-          )}
         </div>
+        <p className='mb-3 text-lg lg:text-xl font-semibold underline group-hover:no-underline'>Read more</p>
       </PrismicLink>
     </li>
   )

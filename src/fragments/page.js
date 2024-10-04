@@ -236,18 +236,22 @@ export const pageQuery = graphql`
           id
           slice_type
           primary {
-            author
-            company
             dark_background
+          }
+          items {
+            author
+            role
+            company
             image {
               alt
               copyright
+              url
               gatsbyImageData
             }
             quote {
+              text
               richText
             }
-            role
           }
         }
         ... on PrismicPageDataBodyTeam {
@@ -292,7 +296,7 @@ export const pageQuery = graphql`
                     image {
                       alt
                       copyright
-                      gatsbyImageData
+                      gatsbyImageData(imgixParams: { fit: "crop", width: 100, height: 100 })
                     }
                   }
                   url

@@ -132,31 +132,20 @@ h6 {
     @apply text-brandCream font-normal;
   }
 }
-.component-teamMember {
-  .name {
-    @apply bg-brandBlack font-black text-xl text-inherit;
-  }
+.component-team .name {
+  @apply font-semibold;
 }
 .component-team ul li:nth-child(1n) {
-  .name {
-    @apply text-brandRust;
-  }
   .position {
     @apply bg-brandRust;
   }
 }
 .component-team ul li:nth-child(2n) {
-  .name {
-    @apply text-brandPink;
-  }
   .position {
     @apply bg-brandPink;
   }
 }
 .component-team ul li:nth-child(3n) {
-  .name {
-    @apply text-brandMustard;
-  }
   .position {
     @apply bg-brandMustard;
   }

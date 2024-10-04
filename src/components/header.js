@@ -54,7 +54,7 @@ const Header = ({ altLangs, lang }) => {
                       </Dropdown>
                     ) : (
                       <li key={`nav-${index}`}>
-                        <PrismicLink className={navStyles} field={nav.primary.link} activeClassName='underline underline-offset-4 dark:text-brandMustard'>
+                        <PrismicLink className={navStyles} field={nav.primary.link} activeClassName='underline text-brandRust underline-offset-4 dark:text-brandMustard'>
                           {nav.primary.label}
                         </PrismicLink>
                       </li>

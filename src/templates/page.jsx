@@ -22,7 +22,7 @@ const PageTemplate = ({ data, location }) => {
   const pageData = page.data
 
   return (
-    <Layout lang={page.lang} altLangs={page.alternate_languages}>
+    <Layout lang={page.lang} altLangs={page.alternate_languages} uid={data.uid}>
       <PageHeader pageData={pageData} type={page.type} />
       <Breadcrumb location={location} />
       <SliceList slices={pageData.body} />
@@ -34,6 +34,7 @@ export default withPrismicPreview(PageTemplate)
 
 export const Head = ({ data, location }) => {
   const page = data.prismicPage
+
   return (
     <>
       <html lang={page.lang || 'en-gb'} />

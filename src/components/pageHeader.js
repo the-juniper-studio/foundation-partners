@@ -5,8 +5,6 @@ import { GatsbyImage, getImage, StaticImage } from 'gatsby-plugin-image'
 const PageHeader = ({ authorData, type, pageData, publishDate }) => {
   let images = pageData.page_image?.gatsbyImageData
 
-  console.log(pageData.page_image)
-
   const article = type === 'blogpost'
   const timeToRead = type === 'blogpost' && publishDate ? Math.ceil(pageData.page_text?.text.split(' ').length / 200) : null
 

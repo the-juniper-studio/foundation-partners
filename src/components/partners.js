@@ -21,7 +21,7 @@ const Partners = ({ slice }) => {
           </div>
         )}
         <div className='relative flex flex-row flex-wrap sm:flex-nowrap justify-center items-center mt-10 gap-3'>
-          <EmblaCarousel autoplay={true} delayLength={3000} loop={true} slidesToScroll={2} controls={false}>
+          <EmblaCarousel autoplay={true} delayLength={200} loop={true} slidesToScroll={2} controls={false}>
             {slice.items.map((partner, index) => {
               return (
                 <div className='relative flex items-center p-3 lg:px-6 dark:invert dark:grayscale' key={`partner-${index}`}>

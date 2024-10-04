@@ -12,8 +12,8 @@ const Team = ({ slice }) => {
 
   const teamData = slice
   return (
-    <section className={`component-team mx-auto w-full max-w-screen-xl p-3 md:p-6 transition-opacity lg:py-10`}>
-      <div className='prose mb-6 dark:prose-invert lg:prose-lg lg:mb-12 max-w-screen-xl mx-auto md:px-6'>
+    <section className={`component-team mx-auto w-full max-w-screen-2xl p-3 md:p-6 transition-opacity lg:py-10`}>
+      <div className='prose mb-6 dark:prose-invert lg:prose-lg lg:mb-12 px-3 md:px-6 max-w-screen-xl mx-auto'>
         {slice.primary.title.text && <PrismicRichText field={slice.primary.title.richText} />}
         <PrismicRichText field={slice.primary.text.richText} />
       </div>
