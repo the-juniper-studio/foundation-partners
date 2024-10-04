@@ -11,13 +11,13 @@ const PageHeader = ({ authorData, type, pageData, publishDate }) => {
   return (
     <div className='relative grid min-h-[15vh] grid-cols-1 grid-rows-1 overflow-hidden bg-brandCream dark:bg-brandBlack'>
       {images && (
-        <div className='relative'>
-          <GatsbyImage className='absolute right-0 top-0 bottom-0 w-2/3' layout='fullWidth' loading='eager' image={images} alt={pageData.page_image.alt || ''} />
+        <div className='absolute inset-0'>
+          <GatsbyImage className='absolute left-auto top-0 bottom-0 right-0 w-2/3 h-full' layout='fullWidth' loading='eager' image={images} alt={pageData.page_image.alt || ''} />
           <StaticImage className='relative w-full' src='../images/hero-svg.png' alt='Hero overlay' />
         </div>
       )}
       <div
-        className={`hero col-span-full w-full row-span-full mx-auto flex flex-col justify-center gap-6 px-3 py-6 lg:py-12 md:max-w-screen-xl md:text-2xl ${images ? 'md:pt-32 lg:pt-48 md:absolute inverted md:w-1/2 relative md:text-brandCream' : 'relative'}`}>
+        className={`hero relative col-span-full row-span-full mx-auto flex flex-col items-center justify-center gap-6 px-10 py-32 text-center md:max-w-screen-md md:text-2xl ${images ? 'md:pt-32 lg:pt-48 inverted md:w-1/2 relative md:text-brandCream' : 'relative'}`}>
         <PrismicRichText field={pageData.page_title.richText} />
         {!article && (
           <>

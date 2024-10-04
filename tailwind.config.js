@@ -28,7 +28,7 @@ module.exports = {
             '--tw-prose-links': theme('colors.brandRust'),
             '--tw-prose-invert-body': theme('colors.white'),
             '--tw-prose-invert-bullets': theme('colors.brandRust'),
-            // '--tw-prose-invert-headings': theme('color.blue.50'),
+            '--tw-prose-invert-headings': theme('color.brandRust'),
             // '--tw-prose-invert-links': theme('colors.white'),
             a: {
               textDecoration: 'underline',
