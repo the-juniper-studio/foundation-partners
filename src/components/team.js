@@ -6,11 +6,8 @@ import { FadeInStagger } from './fadeIn'
 
 const Team = ({ slice }) => {
   var grid = 'sm:grid-cols-2'
-  if (slice.items.length === 3) {
+  if (slice.items.length > 2) {
     grid = 'sm:grid-cols-2 lg:grid-cols-3'
-  }
-  if (slice.items.length > 3) {
-    grid = 'sm:grid-cols-2'
   }
 
   const teamData = slice
