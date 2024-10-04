@@ -4,7 +4,7 @@ import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 
 const Hero = ({ slice }) => {
   return (
-    <section className='component-hero grid grid-cols-1 grid-rows-1 max-h-[50vh] bg-brandMustard'>
+    <section className='component-hero grid grid-cols-1 grid-rows-1 max-h-[50vh] bg-brandRust'>
       {slice.primary.image && (
         <div className='relative col-span-full row-span-full'>
           <GatsbyImage className='opacity-20 h-full w-full' image={getImage(slice.primary.image)} alt={slice.primary.image.alt || ''} />
