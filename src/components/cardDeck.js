@@ -22,7 +22,7 @@ const CardDeck = ({ slice }) => {
           </div>
         )}
         <FadeInStagger duration='.5'>
-          <ul className={`grid grid-cols-1 gap-4 ${grid}`}>
+          <ul className={`grid grid-cols-1 gap-6 md:gap-12 ${grid}`}>
             {slice.items.map((card, index) => {
               return <Card fields={card} key={`card-${index}`} />
             })}
