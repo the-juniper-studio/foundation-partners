@@ -13,7 +13,7 @@ const PageHeader = ({ authorData, type, pageData, publishDate }) => {
   return (
     <div className='hero relative grid min-h-[15vh] grid-cols-1 grid-rows-1 overflow-hidden bg-brandCream dark:bg-brandBlack'>
       <div className={`h-full px-3 md:p-6 w-full max-w-screen-xl mx-auto ${images ? 'grid md:grid-cols-2 md:gap-4 inverted text-brandCream ' : 'text-brandBlack '}`}>
-        <div className='z-10 flex flex-col items-center justify-center py-12 sm:pb-20 md:pb-32 lg:pb-48 sm:items-start sm:text-left space-y-8 text-center text-xl md:text-2xl'>
+        <div className={`z-10 flex flex-col items-center justify-center py-12 ${images && 'sm:pb-20 md:pb-32 lg:pb-48'} sm:items-start sm:text-left space-y-8 text-center text-xl md:text-2xl`}>
           <PrismicRichText field={pageData.page_title.richText} />
           {!article && (
             <>
@@ -31,7 +31,11 @@ const PageHeader = ({ authorData, type, pageData, publishDate }) => {
           {authorData && (
             <div className='text-base'>
               {authorData.image.gatsbyImageData && (
-                <GatsbyImage className='m-2 mx-auto h-16 w-16 rounded-lg border-2 border-white bg-white shadow lg:h-20 lg:w-20' image={getImage(authorData.image)} alt={authorData.image.alt || ''} />
+                <GatsbyImage
+                  className='m-2 mx-auto h-16 w-16 rounded-full border-2 border-brandMustard bg-brandMustard shadow lg:h-20 lg:w-20'
+                  image={getImage(authorData.image)}
+                  alt={authorData.image.alt || ''}
+                />
               )}
               <p className='font-medium'>
                 {authorData.name}

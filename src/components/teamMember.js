@@ -12,7 +12,7 @@ const TeamMember = ({ teamMember }) => {
 
   return (
     <li className='component-teamMember'>
-      <FadeIn x='0' y='50' className='ease transform grid grid-cols-2 sm:grid-cols-3 items-start gap-6'>
+      <FadeIn x='0' y='50' className='ease transform gap-6'>
         <div className='aspect-square w-full'>
           <GatsbyImage image={teamMemberData.image.gatsbyImageData} className='z-10 h-full w-full object-cover' alt={teamMemberData.image.alt || ''} />
         </div>

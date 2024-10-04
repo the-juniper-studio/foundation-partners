@@ -22,8 +22,8 @@ const Footer = ({ lang }) => {
   const config = data.prismicConfig.data
 
   return (
-    <footer role='contentinfo' className='mt-auto'>
-      <div className='mx-auto grid max-w-screen-xl grid-cols-1 gap-6 px-3 md:px-6 py-10 md:grid-cols-3'>
+    <footer role='contentinfo' className='mt-auto bg-brandBlack text-brandCream'>
+      <div className='mx-auto grid max-w-screen-xl grid-cols-1 gap-6 px-3 md:px-6 py-10 md:grid-cols-3 text-lg'>
         <div>
           <div className='mb-4 font-medium'>{config.company_display_name}</div>
           <PrismicRichText field={config.company_address.richText} />
@@ -49,8 +49,8 @@ const Footer = ({ lang }) => {
           )
         })}
       </div>
-      <div className='py-3 text-center'>
-        Crafted by {config.company_display_name} <span className='text-brand-green'>&copy;</span> <span>{new Date().getFullYear()}</span>
+      <div className='p-3 md:p-6 mx-auto max-w-screen-xl text-sm'>
+        Crafted by Juniper <span className='text-brandPink'>&copy;</span> <span>{new Date().getFullYear()}</span>
       </div>
     </footer>
   )

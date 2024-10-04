@@ -28,7 +28,7 @@ const Social = (props) => {
         const { social_network, social_network_url } = social
         if (social_network_url?.url === 'null') return null
         return (
-          <a className='transform rounded-full bg-white text-brandBlack p-1 hover:scale-110' href={social_network_url.url} key={`social-${index}`} target='_blank' rel='noopener noreferrer'>
+          <a className='transform rounded-full bg-brandMustard text-brandBlack p-1 hover:scale-110' href={social_network_url.url} key={`social-${index}`} target='_blank' rel='noopener noreferrer'>
             <span className='sr-only'>Visit us on {social_network}</span>
             {social_network?.toLowerCase() === 'facebook' && <Facebook className='h-8' aria-hidden='true' />}
             {social_network?.toLowerCase() === 'instagram' && <Instagram className='h-8' aria-hidden='true' />}

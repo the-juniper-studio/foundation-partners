@@ -27,12 +27,14 @@ const BlogpostTemplate = ({ data, location }) => {
 
   return (
     <Layout lang={page.lang} altLangs={page.alternate_languages}>
-      <div className='hero relative col-span-full w-full row-span-full mx-auto flex flex-col justify-center gap-6 md:gap-12 px-3 md:px-6 pb-10 pt-32 lg:pt-48 md:max-w-screen-xl md:text-2xl'>
+      <div className='hero relative col-span-full w-full row-span-full mx-auto flex flex-col justify-center gap-6 md:gap-12 px-3 md:px-6 py-12 md:max-w-screen-xl md:text-2xl'>
         <PrismicRichText field={pageData.page_title.richText} />
 
         {authorData && (
           <div className='flex justify-start gap-6 items-center'>
-            {authorData.image.gatsbyImageData && <GatsbyImage className='h-16 w-16 rounded-lg shadow lg:h-20 lg:w-20' image={getImage(authorData.image)} alt={authorData.image.alt || ''} />}
+            {authorData.image.gatsbyImageData && (
+              <GatsbyImage className='h-16 w-16 bg-brandMustard border-brandMustard rounded-full lg:h-20 lg:w-20' image={getImage(authorData.image)} alt={authorData.image.alt || ''} />
+            )}
             <div>
               {' '}
               <p className='text-base font-medium mb-1'>

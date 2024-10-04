@@ -27,7 +27,7 @@ const CategoryCard = ({ item }) => {
           {authorData && (
             <div className='mt-auto flex'>
               <div className='relative mr-3 flex-shrink-0'>
-                <GatsbyImage className='border-1 h-10 w-10 rounded bg-neutral-50' image={authorData.image.gatsbyImageData} alt={authorData.image.alt || ''} />
+                <GatsbyImage className='rounded-full h-10 w-10 bg-brandMustard' image={authorData.image.gatsbyImageData} alt={authorData.image.alt || ''} />
               </div>
               <div>
                 <p className='font-medium'>{authorData.name}</p>
