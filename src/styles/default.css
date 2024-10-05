@@ -73,7 +73,6 @@ a {
     font-bold uppercase
     shadow 
     bg-black text-brandCream 
-    dark:border dark:border-brandCream
     hover:bg-brandMustard hover:shadow-none hover:text-black
     md:text-lg;
   &-brand {

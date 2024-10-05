@@ -34,16 +34,16 @@ const Header = ({ altLangs, lang }) => {
     <header role='banner' className='z-20 text-white text-3xl md:text-base'>
       <nav className='relative mx-auto flex max-w-screen-xl items-center gap-6 px-3 md:p-6 py-4 justify-between'>
         <Link to='/' className='z-20 flex'>
-          <GatsbyImage className='w-40 lg:w-52 object-contain' placeholder='none' loading='eager' image={getImage(config.company_logo)} alt={config.company_display_name} />
+          <GatsbyImage className='w-40 lg:w-52 object-contain dark:invert' placeholder='none' loading='eager' image={getImage(config.company_logo)} alt={config.company_display_name} />
         </Link>
         <span className='z-20 ml-auto md:hidden'>
           <Hamburger color='#dc6747' label='Show menu' rounded toggled={isOpen} toggle={setOpen} />
         </span>
         <div
           className={`${
-            !isOpen ? 'hidden' : 'fixed inset-0 z-10 flex h-screen flex-1 flex-col justify-start bg-brandPink bg-opacity-50'
+            !isOpen ? 'hidden' : 'fixed inset-0 z-10 flex h-screen flex-1 flex-col justify-start bg-brandRust bg-opacity-50'
           } md:relative md:flex md:h-auto md:flex-row md:bg-transparent md:mr-0`}>
-          <div className='max-h-screen overflow-y-scroll rounded bg-brandPink shadow-md md:max-h-none md:overflow-visible md:rounded-none md:bg-transparent md:shadow-none'>
+          <div className='max-h-screen overflow-y-scroll rounded bg-brandRust shadow-md md:max-h-none md:overflow-visible md:rounded-none md:bg-transparent md:shadow-none'>
             <ul className='relative flex-row items-center pt-24 md:flex md:pt-0'>
               {headerData.nav.map((nav, index) => {
                 return (

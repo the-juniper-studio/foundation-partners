@@ -48,7 +48,7 @@ const Breadcrumb = ({ location, title }) => {
                 ) : (
                   <Link
                     to={fullPath}
-                    className='flex font-medium underline underline-offset-2 hover:no-underline'
+                    className='flex font-medium underline underline-offset-2 hover:no-underline hover:text-brandRust'
                     itemScope
                     itemType='https://schema.org/WebPage'
                     itemProp='item'

@@ -31,7 +31,7 @@ const Posts = ({ slice, id, layout, type }) => {
           <PrismicRichText field={slice.primary.title.richText} />
         </div>
       )}
-      <ul className='flex flex-col gap-6 lg:gap-x-12'>
+      <ul className='flex flex-col gap-6 lg:gap-x-1 lg:gap-y-6'>
         {articles.map((item, index) => {
           if (item.node.id === id) return null
           if (layout === 'list') return <CategoryList publishDate={item.node.first_publication_date_formatted} type={type} item={item} key={`article-list-${index}`} />
@@ -40,7 +40,7 @@ const Posts = ({ slice, id, layout, type }) => {
       </ul>
       <div className='flex max-w-full justify-end mt-6'>
         <PrismicLink className='button w-full text-center' href={path}>
-          See all
+          See all Insights
         </PrismicLink>
       </div>
     </section>

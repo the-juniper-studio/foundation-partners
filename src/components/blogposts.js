@@ -23,7 +23,7 @@ const Blogposts = ({ data, slice }) => {
       <div className='prose mb-12 max-w-none text-center dark:prose-invert lg:prose-xl'>
         <PrismicRichText field={slice.primary.title.richText} />
       </div>
-      <ul className='grid grid-cols-1 gap-6 md:grid-cols-3 md:gap-12'>
+      <ul className='grid grid-cols-1 gap-6 md:grid-cols-3'>
         {data.allPrismicBlogpost.edges.map((blogpost, index) => {
           return <CategoryCard isBlogpost={true} item={blogpost} key={`blogpost-${index}`} />
         })}

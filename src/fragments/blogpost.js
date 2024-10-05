@@ -28,6 +28,12 @@ export const blogpostQuery = graphql`
           }
         }
       }
+      page_image {
+        alt
+        copyright
+        url
+        gatsbyImageData
+      }
       page_text {
         richText
         text

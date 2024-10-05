@@ -10,7 +10,7 @@ const PageHeader = ({ authorData, type, pageData, publishDate }) => {
 
   return (
     <div className='hero relative grid min-h-[15vh] grid-cols-1 grid-rows-1 overflow-hidden bg-brandCream dark:bg-brandBlack'>
-      <div className={`h-full px-3 md:p-6 w-full max-w-screen-xl mx-auto ${images ? 'grid md:grid-cols-2 md:gap-4 inverted text-brandCream ' : 'text-brandBlack '}`}>
+      <div className={`h-full px-3 md:p-6 w-full max-w-screen-xl mx-auto ${images ? 'grid md:grid-cols-2 md:gap-4 inverted text-brandCream ' : 'text-brandBlack dark:text-white'}`}>
         <div className={`z-10 flex flex-col items-center justify-center py-12 ${images && 'sm:pb-20 md:pb-32 lg:pb-48'} sm:items-start sm:text-left space-y-8 text-center text-xl md:text-2xl`}>
           <PrismicRichText field={pageData.page_title.richText} />
           {!article && (

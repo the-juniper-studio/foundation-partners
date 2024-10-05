@@ -228,7 +228,7 @@ export const pageQuery = graphql`
             logo {
               alt
               copyright
-              gatsbyImageData(height: 70, layout: FIXED)
+              gatsbyImageData(height: 90, layout: FIXED)
             }
           }
         }
