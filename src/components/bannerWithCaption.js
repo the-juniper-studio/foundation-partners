@@ -3,7 +3,6 @@ import { PrismicRichText, PrismicLink } from '@prismicio/react'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 
 const BannerWithCaption = ({ slice }) => {
-  console.log(slice.primary.image_position)
   var bannerImage = false
   if (slice.primary.image_position === true) {
     bannerImage = true

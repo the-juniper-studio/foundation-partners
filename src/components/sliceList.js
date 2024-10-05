@@ -14,6 +14,7 @@ const components = {
   map: ({ slice }) => <Slice alias='map' slice={slice} />,
   partner_logos: ({ slice }) => <Slice alias='partners' slice={slice} />,
   posts: ({ slice }) => <Slice allowEmpty alias='posts' slice={slice} />,
+  pricing_table: ({ slice }) => <Slice alias='pricingTable' slice={slice} />,
   quote: ({ slice }) => <Slice alias='quote' slice={slice} />,
   team: ({ slice }) => <Slice alias='team' slice={slice} />,
   text: ({ slice }) => <Slice alias='text' slice={slice} />,

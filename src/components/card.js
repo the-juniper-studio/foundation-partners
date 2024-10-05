@@ -12,7 +12,7 @@ const Card = ({ fields }) => {
             <GatsbyImage className='overflow-hidden' image={getImage(fields.image)} alt={fields.image.alt || ''} />
           </div>
         )}
-        <div className='m-3 flex flex-grow flex-col gap-4'>
+        <div className='m-3 flex flex-grow flex-col gap-6 md:gap-12'>
           <div className='prose max-w-none lg:prose-lg prose-invert'>
             <PrismicRichText field={fields.title.richText} />
             <PrismicRichText field={fields.text.richText} />

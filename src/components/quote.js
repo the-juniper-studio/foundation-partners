@@ -27,11 +27,11 @@ const Quote = ({ slice }) => {
           <Circle className='w-2/3 lg:w-1/2 text-brandPink dark:opacity-50 absolute -top-20 bottom-10 -left-20' />
         </FadeIn>
         <FadeIn x='0' y='50' className='mx-auto max-w-screen-lg px-12 py-12'>
-          <div className='w-full  bg-brandRust my-3 md:my-6'>
+          <div className='w-full bg-brandRust my-3 md:my-6'>
             <EmblaCarousel>
               {slice.items.map((quote, index) => {
                 return (
-                  <blockquote className={`relative flex gap-6 md:flex-col p-6 md:p-12 `} key={`item-${index}`} aria-selected={index === 0 ? 'true' : 'false'}>
+                  <blockquote className={`relative w-full p-6 md:p-12 `} key={`item-${index}`} aria-selected={index === 0 ? 'true' : 'false'}>
                     <div className={`relative text-3xl lg:text-4xl md:flex-grow text-center ${textStyle}`}>
                       <PrismicRichText field={quote.quote.richText} />
                     </div>

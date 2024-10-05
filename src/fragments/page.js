@@ -98,7 +98,7 @@ export const pageQuery = graphql`
             image {
               alt
               copyright
-              gatsbyImageData
+              gatsbyImageData(height: 100)
             }
             text {
               richText
@@ -229,6 +229,53 @@ export const pageQuery = graphql`
               alt
               copyright
               gatsbyImageData(height: 90, layout: FIXED)
+            }
+          }
+        }
+        ... on PrismicPageDataBodyPricingTable {
+          id
+          slice_type
+          items {
+            price_option {
+              text
+              richText
+            }
+            plan_title {
+              text
+              richText
+            }
+            features {
+              text
+              richText
+            }
+            call_to_action_text {
+              text
+              richText
+            }
+            call_to_action {
+              isBroken
+              lang
+              link_type
+              tags
+              target
+              type
+              uid
+              url
+              id
+            }
+          }
+          primary {
+            title {
+              text
+              richText
+            }
+            eyebrow_headline {
+              text
+              richText
+            }
+            description {
+              text
+              richText
             }
           }
         }
