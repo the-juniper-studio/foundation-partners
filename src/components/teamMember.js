@@ -12,11 +12,11 @@ const TeamMember = ({ teamMember }) => {
 
   return (
     <li className='component-teamMember'>
-      <FadeIn x='0' y='50' className='ease transform grid grid-cols-2 sm:grid-cols-3 items-start gap-6'>
+      <FadeIn x='0' y='50' className='ease transform grid grid-cols-2 sm:grid-cols-2 items-start gap-6'>
         <div className='aspect-square w-full'>
-          <GatsbyImage image={teamMemberData.image.gatsbyImageData} className='z-10 h-full w-full grayscale object-cover' alt={teamMemberData.image.alt || ''} />
+          <GatsbyImage image={teamMemberData.image.gatsbyImageData} className='z-10 h-full w-full object-cover' alt={teamMemberData.image.alt || ''} />
         </div>
-        <div className='flex h-full flex-col justify-end sm:col-span-2'>
+        <div className='flex h-full flex-col justify-end '>
           <div>
             <div className='flex items-baseline'>
               <h2 className='font-semibold'>{teamMemberData.name}</h2>

@@ -33,7 +33,7 @@ const BlogpostTemplate = ({ data, location }) => {
         {authorData && (
           <div className='flex justify-start gap-6 items-center'>
             {authorData.image.gatsbyImageData && (
-              <GatsbyImage className='h-16 w-16 bg-brandMustard border-brandMustard rounded-full lg:h-20 lg:w-20' image={getImage(authorData.image)} alt={authorData.image.alt || ''} />
+              <GatsbyImage className='h-16 w-16 bg-brandBlack border-2 border-brandBlack rounded-full lg:h-20 lg:w-20' image={getImage(authorData.image)} alt={authorData.image.alt || ''} />
             )}
             <div>
               {' '}

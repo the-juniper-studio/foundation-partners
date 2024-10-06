@@ -24,7 +24,7 @@ export const teamQuery = graphql`
       image {
         alt
         copyright
-        gatsbyImageData(imgixParams: { fit: "crop", width: 100, height: 100, monochrome: "000" })
+        gatsbyImageData(imgixParams: { fit: "crop", width: 100, height: 100 })
         url
       }
       name

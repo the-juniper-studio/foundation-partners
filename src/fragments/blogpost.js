@@ -22,7 +22,7 @@ export const blogpostQuery = graphql`
               image {
                 alt
                 copyright
-                gatsbyImageData(imgixParams: { fit: "facearea", facepad: 4 })
+                gatsbyImageData(imgixParams: { fit: "facearea", facepad: 2 })
               }
             }
           }

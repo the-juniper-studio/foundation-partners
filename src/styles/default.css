@@ -102,7 +102,7 @@ h6 {
 /* Page Header */
 .hero {
   h1 {
-    @apply mb-0 font-normal text-4xl md:text-6xl;
+    @apply mb-0 font-normal text-5xl md:text-6xl;
     strong {
       @apply text-brandRust dark:text-brandMustard font-semibold;
     }

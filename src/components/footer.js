@@ -38,7 +38,7 @@ const Footer = ({ lang }) => {
                 {footer.items.map((footerItem, index) => {
                   return (
                     <li className='' key={`footerItem-${index}`}>
-                      <PrismicLink className='inline-block px-2 pb-2 hover:underline hover:underline-offset-4' field={footerItem.link}>
+                      <PrismicLink className='block py-2 hover:underline hover:underline-offset-4' field={footerItem.link}>
                         {footerItem.link_label}
                       </PrismicLink>
                     </li>
