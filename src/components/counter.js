@@ -18,7 +18,7 @@ const Counter = ({ slice }) => {
             return (
               <FadeIn x='0' y='50' key={`counter-${index}`} className={`counter-${index} flex flex-col p-8 text-center leading-none md:p-16`}>
                 <CountUp
-                  className='number text-4xl font-medium md:text-6xl lg:text-7xl'
+                  className='number text-4xl font-semibold md:text-6xl lg:text-7xl'
                   delay={slice.primary.delay || 0}
                   enableScrollSpy={true}
                   end={counter.final_number}

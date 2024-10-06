@@ -25,7 +25,7 @@ const Footer = ({ lang }) => {
     <footer role='contentinfo' className='mt-auto bg-brandBlack text-brandCream'>
       <div className='mx-auto grid max-w-screen-xl grid-cols-1 gap-6 px-3 md:px-6 py-10 md:grid-cols-3 text-lg'>
         <div>
-          <div className='mb-4 font-medium'>{config.company_display_name}</div>
+          <div className='mb-4 font-semibold'>{config.company_display_name}</div>
           <PrismicRichText field={config.company_address.richText} />
           {config.company_phone}
           <Social />
@@ -33,7 +33,7 @@ const Footer = ({ lang }) => {
         {footerData.body.map((footer, index) => {
           return (
             <div key={`footer-${index}`}>
-              {footer.primary.title && <div className='mb-4 font-medium'>{footer.primary.title}</div>}
+              {footer.primary.title && <div className='mb-4 font-semibold'>{footer.primary.title}</div>}
               <ul>
                 {footer.items.map((footerItem, index) => {
                   return (

@@ -15,7 +15,7 @@ const Accordion = ({ slice }) => {
         {slice.items.map((accordion, index) => {
           return (
             <details className='transform bg-brandCream transition-all dark:border dark:border-neutral-700 dark:bg-neutral-700' key={`accordion-${index}`}>
-              <summary className='m-0 flex w-full cursor-pointer font-medium justify-between bg-brandCream p-4 text-left text-lg hover:text-brandRust dark:bg-neutral-700 dark:text-indigo-300 dark:hover:text-indigo-400 lg:text-xl'>
+              <summary className='m-0 flex w-full cursor-pointer font-semibold justify-between bg-brandCream p-4 text-left text-lg hover:text-brandRust dark:bg-neutral-700 dark:text-indigo-300 dark:hover:text-indigo-400 lg:text-xl'>
                 <PrismicRichText field={accordion.question.richText} />
                 <div className='indicator flex items-center'>
                   <ChevronRight className='w-6' />

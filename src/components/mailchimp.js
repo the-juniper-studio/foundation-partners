@@ -88,7 +88,7 @@ const Mailchimp = ({ lang }) => {
               </form>
               <p className='mt-3 text-sm text-indigo-100'>
                 We care about the protection of your data. Read our{' '}
-                <a href='/privacy-policy' className='font-medium text-white underline'>
+                <a href='/privacy-policy' className='font-semibold text-white underline'>
                   Privacy Policy.
                 </a>
               </p>
@@ -105,7 +105,7 @@ const Mailchimp = ({ lang }) => {
               </svg>
             </div>
             <div className='prose prose-xl ml-3'>
-              <h3 className='font-medium text-green-800'>Success</h3>
+              <h3 className='font-semibold text-green-800'>Success</h3>
               <p className='text-green-700'>{message || 'You have successfully signed up to our mailing list'}</p>
             </div>
           </div>
@@ -120,7 +120,7 @@ const Mailchimp = ({ lang }) => {
               </svg>
             </div>
             <div className='prose prose-xl ml-3'>
-              <h3 className='mb-0 font-medium text-red-800'>There were an errors with your submission</h3>
+              <h3 className='mb-0 font-semibold text-red-800'>There were an errors with your submission</h3>
               <p className=' text-red-700'>{error || 'Please try again'}</p>
               <button className='button' onClick={() => setError()}>
                 Try again

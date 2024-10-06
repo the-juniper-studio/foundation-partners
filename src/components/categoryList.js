@@ -12,10 +12,10 @@ const CategoryList = ({ item }) => {
         <article className='relative isolate flex flex-col gap-6 lg:flex-row'>
           <div className='w-full'>
             <div className='relative max-w-xl'>
-              <h3 className='text-lg py-0 group-hover:text-brandRust font-medium'>{itemData.page_title.text}</h3>
+              <h3 className='text-lg py-0 group-hover:text-brandRust font-semibold'>{itemData.page_title.text}</h3>
             </div>
             <div className='flex border-neutral-900/5 gap-2 text-sm'>
-              <p className='font-medium'>{authorData.name}</p>
+              <p className='font-semibold'>{authorData.name}</p>
 
               <div className='flex flex-col items-start'>
                 <time dateTime={publishDate} className='text-neutral-500 dark:text-neutral-300'>

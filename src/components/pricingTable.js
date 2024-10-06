@@ -25,7 +25,7 @@ const PricingTable = ({ slice }) => {
                     {product.price_option && <p className='mt-4 font-semibold border-b-2 pb-6 border-brandMustard'>{product.price_option.text}</p>}
                     <PrismicRichText field={product.features.richText} />
                   </div>
-                  <PrismicLink className='button button-brand mt-auto text-center' field={product.call_to_action}>
+                  <PrismicLink className='button button-brand mt-auto text-center link' field={product.call_to_action}>
                     {product.call_to_action_text.text ? product.call_to_action_text.text : 'Read more'}
                   </PrismicLink>
                 </FadeIn>

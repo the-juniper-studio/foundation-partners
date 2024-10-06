@@ -15,7 +15,7 @@ const Contact = ({ slice }) => {
             <input type='hidden' name='surname' />
             <input type='hidden' name='form-name' value='contact' />
             <div className='mb-5'>
-              <label className='mb-2 mt-4 block lg:mt-0 lg:text-lg font-medium' htmlFor='name'>
+              <label className='mb-2 mt-4 block lg:mt-0 lg:text-lg font-semibold' htmlFor='name'>
                 What's your name?
               </label>
               <input
@@ -27,7 +27,7 @@ const Contact = ({ slice }) => {
               />
             </div>
             <div className='mb-5'>
-              <label className='mb-2 mt-4 block lg:text-lg font-medium' htmlFor='email'>
+              <label className='mb-2 mt-4 block lg:text-lg font-semibold' htmlFor='email'>
                 What's your email address?
               </label>
               <input
@@ -39,7 +39,7 @@ const Contact = ({ slice }) => {
               />
             </div>
             <div className='mb-5'>
-              <label className='mb-2 mt-4 block lg:text-lg font-medium' htmlFor='phone'>
+              <label className='mb-2 mt-4 block lg:text-lg font-semibold' htmlFor='phone'>
                 What's your phone number?
               </label>
               <input
@@ -51,7 +51,7 @@ const Contact = ({ slice }) => {
               />
             </div>
             <div className='mb-5'>
-              <label className='mb-2 mt-4 block lg:text-lg font-medium' htmlFor='message'>
+              <label className='mb-2 mt-4 block lg:text-lg font-semibold' htmlFor='message'>
                 How can we help?
               </label>
               <textarea

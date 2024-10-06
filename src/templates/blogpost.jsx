@@ -37,7 +37,7 @@ const BlogpostTemplate = ({ data, location }) => {
             )}
             <div>
               {' '}
-              <p className='text-base font-medium mb-1'>
+              <p className='text-base font-semibold mb-1'>
                 {authorData.name}
                 {authorData.position && (
                   <>

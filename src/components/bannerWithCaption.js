@@ -8,11 +8,11 @@ const BannerWithCaption = ({ slice }) => {
     bannerImage = true
   }
   return (
-    <section className='component-banner_with_caption relative mx-auto my-3 lg:my-6 w-full max-w-screen-xl bg-brandPeach dark:bg-white/10 grid md:grid-cols-2 gap-6'>
+    <section className='component-banner_with_caption relative mx-auto md:my-6 w-full max-w-screen-xl bg-brandPeach dark:bg-white/10 grid md:grid-cols-2 gap-6'>
       <div className={`${bannerImage && 'md:order-last'}`}>
         <GatsbyImage className='h-full w-full' image={getImage(slice.primary.image)} alt={slice.primary.image.alt || ''} />
       </div>
-      <div className='relative z-10 flex items-center md:my-10 px-3 md:px-6 '>
+      <div className='relative z-10 flex items-center md:my-10 p-6'>
         <div
           className={`${
             slice.primary.image_position === true ? 'md:ml-auto md:mr-0' : 'md:ml-0 md:mr-auto'

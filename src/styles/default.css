@@ -66,11 +66,11 @@ a {
 }
 
 .button {
-  @apply inline-block
-    rounded-full
+  @apply rounded-full
+  
     px-6
     py-2 md:py-3
-    font-bold uppercase
+    font-semibold uppercase
     shadow 
     bg-black text-brandCream 
     hover:bg-brandMustard hover:shadow-none hover:text-black
@@ -81,22 +81,22 @@ a {
 }
 
 h1 {
-  @apply mb-4 text-4xl;
+  @apply tracking-tight mb-4 text-4xl;
 }
 h2 {
-  @apply my-2 text-2xl;
+  @apply tracking-tight my-2 text-2xl;
 }
 h3 {
-  @apply my-2 text-xl;
+  @apply tracking-tight my-2 text-xl;
 }
 h4 {
-  @apply my-2 text-xl;
+  @apply tracking-tight my-2 text-xl;
 }
 h5 {
-  @apply my-2 text-lg;
+  @apply tracking-tight my-2 text-lg;
 }
 h6 {
-  @apply my-2 text-base;
+  @apply tracking-tight my-2 text-base;
 }
 
 /* Page Header */
@@ -104,7 +104,7 @@ h6 {
   h1 {
     @apply mb-0 font-normal text-4xl md:text-6xl;
     strong {
-      @apply text-brandRust dark:text-brandMustard font-bold;
+      @apply text-brandRust dark:text-brandMustard font-semibold;
     }
   }
   & .inverted {
@@ -121,7 +121,7 @@ h6 {
 .component-banner_with_caption h2 {
   @apply mb-0 font-normal text-3xl md:text-5xl;
   strong {
-    @apply text-brandRust dark:text-brandMustard font-bold;
+    @apply text-brandRust dark:text-brandMustard font-semibold;
   }
 }
 
@@ -168,16 +168,9 @@ summary::-webkit-details-marker {
   h3 {
   }
 }
-.component-card .link:after {
-  background-color: transparent;
-  bottom: 0;
+.link:after {
   content: '';
-  left: 0;
-  pointer-events: auto;
-  position: absolute;
-  right: 0;
-  top: 0;
-  z-index: 10;
+  @apply z-10 absolute inset-0 bg-transparent pointer-events-auto;
 }
 .component-counter {
   .counter-0 {
