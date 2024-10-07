@@ -13,6 +13,7 @@ const Quote = ({ slice }) => {
   if (!dark) {
     textStyle = 'text-brandRust dark:text-brandCream'
   }
+  if (slice.items < 1) return null
 
   return (
     <FadeInStagger duration='.5'>
@@ -28,10 +29,10 @@ const Quote = ({ slice }) => {
         </FadeIn>
         <FadeIn x='0' y='50' className='mx-auto max-w-screen-lg px-12 py-12'>
           <div className='w-full bg-brandRust my-3 md:my-6'>
-            <EmblaCarousel>
+            <EmblaCarousel arrows={true} autoPlay={false} delayLength={5000} loop={true} slidesToScroll={1} controls={true}>
               {slice.items.map((quote, index) => {
                 return (
-                  <blockquote className={`relative w-full p-6 md:p-12 `} key={`item-${index}`} aria-selected={index === 0 ? 'true' : 'false'}>
+                  <blockquote className='relative min-w-full p-6 md:p-12' key={`item-${index}`} aria-selected={index === 0 ? 'true' : 'false'}>
                     <div className={`relative text-3xl lg:text-4xl md:flex-grow text-center ${textStyle}`}>
                       <PrismicRichText field={quote.quote.richText} />
                     </div>

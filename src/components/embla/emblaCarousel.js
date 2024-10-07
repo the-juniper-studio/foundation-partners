@@ -3,7 +3,7 @@ import { PrevButton, NextButton, EmblaDots, EmblaTabs, EmblaThumbs } from './emb
 import useEmblaCarousel from 'embla-carousel-react'
 import Autoplay from 'embla-carousel-autoplay'
 
-const EmblaCarousel = ({ arrows, autoPlay, children, delayLength, controls, loop, tabs, slice, slidesToScroll, thumbs }) => {
+const EmblaCarousel = ({ arrows, autoPlay, children, delayLength = 3000, controls, loop, tabs, slice, slidesToScroll, thumbs }) => {
   const options = {
     loop,
     slidesToScroll: slidesToScroll || 1,
@@ -72,7 +72,7 @@ const EmblaCarousel = ({ arrows, autoPlay, children, delayLength, controls, loop
         <div className='overflow-hidden' ref={emblaRef}>
           <div className='flex w-full'>{children}</div>
         </div>
-        {controls && (
+        {controls && children.length > 1 && (
           <div className='controls justify-between flex mt-2'>
             {thumbs && items ? (
               <div className='grid grid-cols-5 gap-2 sm:grid-cols-6 md:grid-cols-8 lg:grid-cols-12'>
@@ -98,11 +98,6 @@ const EmblaCarousel = ({ arrows, autoPlay, children, delayLength, controls, loop
       </div>
     </div>
   )
-}
-
-EmblaCarousel.defaultProps = {
-  auto: true,
-  delayLength: '3000'
 }
 
 export default EmblaCarousel
