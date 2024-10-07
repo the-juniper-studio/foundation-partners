@@ -31,8 +31,8 @@ const Quote = ({ slice }) => {
           <EmblaCarousel arrows={true} autoPlay={false} delayLength={5000} loop={true} slidesToScroll={1} controls={true}>
             {slice.items.map((quote, index) => {
               return (
-                <blockquote className='flex flex-col items-center justify-center min-w-full p-6 md:p-12 bg-brandRust' key={`item-${index}`} aria-selected={index === 0 ? 'true' : 'false'}>
-                  <div className={`relative text-lg lg:text-4xl text-center mb-6 ${textStyle}`}>
+                <blockquote className='flex flex-col items-center md:justify-center min-w-full p-6 md:p-12 bg-brandRust' key={`item-${index}`} aria-selected={index === 0 ? 'true' : 'false'}>
+                  <div className={`relative text-lg lg:text-3xl text-center mb-6 ${textStyle}`}>
                     <PrismicRichText field={quote.quote.richText} />
                   </div>
                   <footer className='flex flex-col text-center gap-6 items-center'>
