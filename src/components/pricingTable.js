@@ -9,9 +9,6 @@ import Circle from './svg/circle'
 const PricingTable = ({ slice }) => {
   return (
     <section className='component-pricingtable pt-10 relative overflow-hidden'>
-      <div className='text-center w-full px-6 text-brandRust font-semibold text-xl'>
-        <PrismicRichText field={slice.primary.eyebrow_headline.richText} />
-      </div>
       <div className='px-4 my-5 prose dark:prose-invert prose-lg lg:prose-xl max-w-screen-xl mx-auto z-10 relative'>
         <PrismicRichText field={slice.primary.title.richText} />
         <PrismicRichText field={slice.primary.description.richText} />

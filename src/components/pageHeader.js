@@ -11,12 +11,12 @@ const PageHeader = ({ authorData, type, pageData, publishDate }) => {
   return (
     <div className='hero relative grid min-h-[15vh] grid-cols-1 grid-rows-1 overflow-hidden bg-brandCream dark:bg-brandBlack'>
       <div className={`h-full px-3 md:p-6 w-full max-w-screen-xl mx-auto ${images ? 'grid md:grid-cols-2 md:gap-4 inverted md:text-brandCream ' : 'text-brandBlack dark:text-white'}`}>
-        <div className={`z-10 flex flex-col justify-center py-12 ${images ? 'pb-32 md:pb-40 lg:pb-48' : 'items-center sm:items-start'} sm:text-left space-y-8`}>
+        <div className={`z-10 flex flex-col justify-center pt-12 ${images ? 'pb-32 md:pb-40 lg:pb-48' : 'items-center sm:items-start'} sm:text-left space-y-8`}>
           <PrismicRichText field={pageData.page_title.richText} />
           {!article && (
             <>
               {pageData.page_text.text && (
-                <div className='prose prose-xl min-w-full'>
+                <div className={`prose prose-xl min-w-full ${images && 'prose-invert'}`}>
                   <PrismicRichText field={pageData.page_text.richText} />
                 </div>
               )}
