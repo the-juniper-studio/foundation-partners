@@ -15,7 +15,7 @@ const PricingTable = ({ slice }) => {
         <PrismicRichText field={slice.primary.description.richText} />
       </div>
       <FadeInStagger duration='.5'>
-        <ul className='md:grid grid-cols-3 gap-6 md:mt-12 p-3 mt-3 space-y-3 md:space-y-0 max-w-screen-2xl mx-auto'>
+        <ul className='md:grid grid-cols-3 gap-6 py-10 p-3 md:px-6 mt-3 space-y-3 md:space-y-0 max-w-screen-2xl mx-auto'>
           {slice.items.map((product, index) => {
             return (
               <li key={`product-${index}`}>

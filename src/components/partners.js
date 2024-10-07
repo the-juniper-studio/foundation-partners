@@ -21,7 +21,7 @@ const Partners = ({ slice }) => {
           </div>
         )}
         <div className='relative flex flex-row flex-wrap sm:flex-nowrap justify-center items-center mt-10 gap-2'>
-          <EmblaCarousel autoplay={true} delayLength={200} loop={true} slidesToScroll={2} controls={false}>
+          <EmblaCarousel autoPlay={true} delayLength={6000} loop={true} slidesToScroll={3} controls={false}>
             {slice.items.map((partner, index) => {
               return (
                 <div className='relative flex items-center p-3 lg:px-6 dark:invert dark:grayscale' key={`partner-${index}`}>
@@ -36,7 +36,7 @@ const Partners = ({ slice }) => {
               )
             })}
           </EmblaCarousel>
-          <div className='bg-gradient-to-r from-5% to-brandCream from-brandCream dark:from-brandBlack dark:to-brandBlack dark:via-transparent via-transparent absolute to-95% inset-0'></div>
+          <div className='bg-gradient-to-r from-[3]% to-brandCream from-brandCream dark:from-brandBlack dark:to-brandBlack dark:via-transparent via-transparent absolute to-[97]% inset-0'></div>
         </div>
       </div>
     </div>
