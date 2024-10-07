@@ -7,7 +7,7 @@ const CategoryList = ({ item }) => {
   const publishDate = item.node.first_publication_date_formatted
 
   return (
-    <li className='space-y-10 group border-t-2 border-brandBlack pt-3'>
+    <li className='space-y-10 group border-t-2 border-brandBlack dark:border-brandCream pt-3'>
       <PrismicLink href={item.node.url} className='flex'>
         <article className='relative isolate flex flex-col gap-6 lg:flex-row'>
           <div className='w-full'>

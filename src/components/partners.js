@@ -22,7 +22,7 @@ const PartnerLink = ({ partner }) =>
 
 const CarouselView = ({ slice }) => (
   <div className='relative flex flex-row flex-wrap sm:flex-nowrap justify-center items-center mt-10 gap-2'>
-    <EmblaCarousel autoPlay={true} delayLength={6000} loop={true} slidesToScroll={3} controls={false}>
+    <EmblaCarousel autoPlay={true} delayLength={6000} loop={true} slidesToScroll={2} controls={false}>
       {slice.items.map((partner, index) => (
         <div className='relative flex items-center p-3 lg:px-6 dark:invert dark:grayscale' key={`partner-${index}`}>
           <PartnerLink partner={partner} />
@@ -36,7 +36,7 @@ const CarouselView = ({ slice }) => (
 const GridView = ({ slice }) => (
   <FadeInStagger duration='.2' className='relative overflow-hidden'>
     <FadeIn x='0' y='50' className='hidden sm:flex'>
-      <Circle className='max-w-screen-xl absolute mx-auto left-0 right-0 text-brandMustard' />
+      <Circle className='max-w-screen-xl absolute mx-auto left-0 right-0 text-brandMustard dark:opacity-20' />
     </FadeIn>
     <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 max-w-screen-xl mx-auto gap-y-10'>
       {slice.items.map((partner, index) => (
