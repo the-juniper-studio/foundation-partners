@@ -256,6 +256,10 @@ export const pageQuery = graphql`
               text
               richText
             }
+            description {
+              text
+              richText
+            }
             features {
               text
               richText
