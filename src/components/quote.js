@@ -32,7 +32,7 @@ const Quote = ({ slice }) => {
             {slice.items.map((quote, index) => {
               return (
                 <blockquote className='flex flex-col items-center md:justify-center min-w-full p-6 md:p-12 bg-brandRust' key={`item-${index}`} aria-selected={index === 0 ? 'true' : 'false'}>
-                  <div className={`relative text-lg lg:text-3xl text-center mb-6 ${textStyle}`}>
+                  <div className={`relative prose-lg lg:text-3xl prose prose-invert text-center mb-6 ${textStyle}`}>
                     <PrismicRichText field={quote.quote.richText} />
                   </div>
                   <footer className='flex flex-col text-center gap-6 items-center'>
