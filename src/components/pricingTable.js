@@ -25,12 +25,17 @@ const PricingTable = ({ slice }) => {
       <FadeInStagger duration='.5' className='lg:grid grid-cols-3 gap-6 py-10 p-3 md:px-6 mt-3 space-y-3 lg:space-y-0 max-w-screen-2xl mx-auto'>
         {slice.items.map((product, index) => {
           return (
-            <FadeIn key={`product-${index}`} x='0' y='50' className='pricing-card flex flex-col gap-6 md:gap-10 ease relative transform p-6 h-full bg-brandPeach dark:bg-white/10'>
-              <div className='h-auto lg:min-h-96 xl:min-h-72 border-b-2 border-brandMustard prose max-w-none lg:prose-lg dark:prose-invert'>
+            <FadeIn key={`product-${index}`} x='0' y='50' className='pricing-card grid grid-rows-2 ease relative transform p-6 h-full bg-brandPeach dark:bg-white/10'>
+              <div className='h-auto border-b-2 border-brandMustard prose max-w-none lg:prose-lg dark:prose-invert'>
                 {product.plan_title && <h2 className=''>{product.plan_title.text}</h2>}
                 {product.price_option && <p className='mt-4 font-semibold pb-6 '>{product.price_option.text}</p>}
+                {product.description && (
+                  <div className='mt-auto prose max-w-none dark:prose-invert'>
+                    <PrismicRichText field={product.description.richText} />
+                  </div>
+                )}
               </div>
-              <div className='prose max-w-none lg:prose-lg dark:prose-invert'>
+              <div className='prose max-w-none prose-lg lg:prose-xl dark:prose-invert pt-3'>
                 <PrismicRichText field={product.features.richText} />
               </div>
               {product.call_to_action && (
@@ -38,9 +43,6 @@ const PricingTable = ({ slice }) => {
                   {product.call_to_action_text.text ? product.call_to_action_text.text : 'Read more'}
                 </PrismicLink>
               )}
-              <div className='mt-auto lg:min-h-80 prose max-w-none dark:prose-invert bg-white/20 p-3 lg:p-6'>
-                <PrismicRichText field={product.description.richText} />
-              </div>
             </FadeIn>
           )
         })}
