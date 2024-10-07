@@ -16,9 +16,9 @@ const PageHeader = ({ authorData, type, pageData, publishDate }) => {
           {!article && (
             <>
               {pageData.page_text.text && (
-                <p className='text-2xl'>
+                <div className='text-2xl'>
                   <PrismicRichText field={pageData.page_text.richText} />
-                </p>
+                </div>
               )}
               {pageData.page_button_link && (
                 <div>

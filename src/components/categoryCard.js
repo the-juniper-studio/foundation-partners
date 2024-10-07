@@ -6,10 +6,10 @@ const CategoryCard = ({ item }) => {
   const itemData = item.node.data
   // const authorData = itemData.author?.document.data
   // const publishDate = item.node.first_publication_date_formatted
-  let timeToRead
+  // let timeToRead
 
-  const wordsPerMinute = 200
-  let wordCount = itemData.page_text?.text.split(' ').length
+  // const wordsPerMinute = 200
+  // let wordCount = itemData.page_text?.text.split(' ').length
   // timeToRead = Math.ceil(wordCount / wordsPerMinute)
 
   return (
