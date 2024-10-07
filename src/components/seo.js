@@ -49,7 +49,7 @@ export const Seo = ({ children, datePublished, dateModified, isArticle, pageData
   const base64Title = Buffer.from(meta_title || page_title?.text)
     .toString('base64')
     .replace(/\//g, '_')
-  const base64ImageUrl = Buffer.from(`https://assets.imgix.net/~text?txt64=${base64Title}&txtclr=fff&txtlead=0&txtshad=5&txtfont=Helvetica%2CBold&txtalign=center&txtsize=48&w=1000&txtpad=20`)
+  const base64ImageUrl = Buffer.from(`https://assets.imgix.net/~text?txt64=${base64Title}&txtclr=ffffff&txtlead=0&txtshad=5&txtfont=Helvetica%2CBold&txtalign=center&txtsize=48&w=1000&txtpad=20`)
     .toString('base64')
     .replace(/\//g, '_')
   const base64CompanyLogo = Buffer.from(company_logo.url || logo)
