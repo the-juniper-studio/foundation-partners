@@ -30,7 +30,7 @@ const PricingTable = ({ slice }) => {
                       {product.call_to_action_text.text ? product.call_to_action_text.text : 'Read more'}
                     </PrismicLink>
                   )}
-                  <div className='prose dark:prose-invert '>
+                  <div className='prose dark:prose-invert bg-white/20 p-3 lg:p-6'>
                     <PrismicRichText field={product.description.richText} />
                   </div>
                 </FadeIn>
