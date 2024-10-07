@@ -11,8 +11,8 @@ const Contact = ({ slice }) => {
           </div>
         )}
         <div className='col-span-3'>
-          <form name='contact' method='POST' action='/success' data-netlify='true' data-netlify-honeypot='surname'>
-            <input type='hidden' name='surname' />
+          <form name='contact' method='POST' action='./success/' data-netlify='true' data-netlify-honeypot='bot-field' netlify-honeypot='bot-field'>
+            <input type='hidden' name='bot-field' />
             <input type='hidden' name='form-name' value='contact' />
             <div className='mb-5'>
               <label className='mb-2 mt-4 block lg:mt-0 lg:text-lg font-semibold' htmlFor='name'>
