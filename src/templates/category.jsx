@@ -34,7 +34,7 @@ const CategoryTemplate = ({ data, location, pageContext }) => {
   return (
     <Layout lang={page.lang} altLangs={page.alternate_languages}>
       <PageHeader pageData={pageData} type={page.type} />
-      <Breadcrumb location={location} />
+      {/* <Breadcrumb location={location} /> */}
       <div className='relative mx-auto max-w-7xl px-3 md:px-6 py-5 pb-4 sm:pb-8 md:py-8'>
         <div className='relative'>
           <ul className='grid grid-cols-1 md:grid-cols-3 gap-x-12 gap-y-6'>

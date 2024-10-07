@@ -12,7 +12,7 @@ const PricingTable = ({ slice }) => {
       <div className='text-center w-full px-6 text-brandRust font-semibold text-xl'>
         <PrismicRichText field={slice.primary.eyebrow_headline.richText} />
       </div>
-      <div className='px-4 my-5 text-center prose dark:prose-invert prose-lg lg:prose-xl max-w-screen-xl mx-auto z-10 relative'>
+      <div className='px-4 my-5 prose dark:prose-invert prose-lg lg:prose-xl max-w-screen-xl mx-auto z-10 relative'>
         <PrismicRichText field={slice.primary.title.richText} />
         <PrismicRichText field={slice.primary.description.richText} />
       </div>
