@@ -1,5 +1,5 @@
 import React from 'react'
-import { PrismicRichText } from '@prismicio/react'
+import { PrismicRichText, PrismicLink } from '@prismicio/react'
 
 // Components
 import Card from './card'
@@ -21,6 +21,7 @@ const CardDeck = ({ slice }) => {
             <PrismicRichText field={slice.primary.title.richText} />
           </div>
         )}
+
         <FadeInStagger duration='.5'>
           <ul className={`grid grid-cols-1 gap-6 px-3 md:px-6 ${grid}`}>
             {slice.items.map((card, index) => {
@@ -28,6 +29,13 @@ const CardDeck = ({ slice }) => {
             })}
           </ul>
         </FadeInStagger>
+        {slice.primary.button_link && (
+          <div className='px-3 md:px-6 mt-12 text-center'>
+            <PrismicLink className='button button-brand text-center' field={slice.primary.button_link}>
+              {slice.primary.button_text ? slice.primary.button_text : 'Read more'}
+            </PrismicLink>
+          </div>
+        )}
       </div>
     </section>
   )

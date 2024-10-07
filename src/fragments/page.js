@@ -81,6 +81,18 @@ export const pageQuery = graphql`
               richText
               text
             }
+            button_link {
+              isBroken
+              lang
+              link_type
+              tags
+              target
+              type
+              uid
+              url
+              id
+            }
+            button_text
           }
           items {
             button_link {
