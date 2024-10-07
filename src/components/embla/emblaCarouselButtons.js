@@ -3,7 +3,7 @@ import { GatsbyImage } from 'gatsby-plugin-image'
 
 export const PrevButton = ({ enabled, onClick }) => (
   <button
-    className='embla-button bg-neutral-300 hover:text-brand-600 z-10 flex h-10 w-10 items-center justify-center rounded-full text-white hover:bg-white focus:outline-none'
+    className='embla-button bg-brandBlack/20 hover:text-brandRust z-10 flex h-10 w-10 items-center justify-center rounded-full text-brandCream hover:bg-brandCream focus:outline-none'
     onClick={onClick}
     disabled={!enabled}>
     <div className='sr-only'>Previous</div>
@@ -15,7 +15,7 @@ export const PrevButton = ({ enabled, onClick }) => (
 
 export const NextButton = ({ enabled, onClick }) => (
   <button
-    className='embla-button bg-neutral-300 hover:text-brand-600 z-10 flex h-10 w-10 items-center justify-center rounded-full text-white hover:bg-white focus:outline-none'
+    className='embla-button bg-brandBlack/20 hover:text-brandRust z-10 flex h-10 w-10 items-center justify-center rounded-full text-brandCream hover:bg-brandCream focus:outline-none'
     onClick={onClick}
     disabled={!enabled}>
     <div className='sr-only'>Next</div>
@@ -27,7 +27,7 @@ export const NextButton = ({ enabled, onClick }) => (
 
 export const EmblaDots = ({ selected, onClick }) => (
   <button
-    className={`m-1 h-6 w-6 rounded-full hover:bg-brand-500 border border-transparent outline-none embla__dot${selected ? ' is-selected bg-white border-brand-500' : ' border-brand-500 bg-neutral-200'}`}
+    className={`m-1 h-6 w-6 rounded-full hover:bg-brandRust hover:border-brandRust border outline-none border-transparent embla__dot${selected ? ' is-selected bg-brandCream border-brandCream' : ' border-brandMustard bg-brandPeach'}`}
     onClick={onClick}>
     <span className='sr-only'>dot button</span>
   </button>
@@ -36,7 +36,7 @@ export const EmblaDots = ({ selected, onClick }) => (
 export const EmblaThumbs = ({ selected, onClick, image, video }) => {
   if (!image && !video) return null
   return (
-    <button className={`${selected ? 'border-brand-500 block border-2 ' : ''}m-0 aspect-video bg-white p-0.5`} onClick={onClick} aria-label={image.alt || 'missing alt'}>
+    <button className={`${selected ? 'border-brandMustard block border-2 ' : ''}m-0 aspect-video bg-brandCream p-0.5`} onClick={onClick} aria-label={image.alt || 'missing alt'}>
       {video ? <img src={video.thumbnail_url} alt='' /> : <GatsbyImage className='h-full w-full object-cover' image={image.gatsbyImageData} alt={image.alt || ''} />}
     </button>
   )
@@ -47,7 +47,7 @@ export const EmblaTabs = ({ selected, onClick, text }) => {
   return (
     <button
       onClick={onClick}
-      className={`${selected ? 'border-brand-500 text-brand-500 dark:text-brand-500Light' : 'hover:text-brand-600 border-transparent text-neutral-500 hover:border-neutral-300 dark:text-neutral-100'}
+      className={`${selected ? 'border-brandMustard text-brandMustard' : 'hover:text-brandRust border-transparent text-neutral-500 hover:border-brandBlack dark:text-neutral-100'}
             border-b-2 px-1 py-4 text-center lg:w-1/4 lg:text-lg xl:text-xl`}
       aria-current={selected ? 'page' : undefined}>
       {text}

@@ -28,34 +28,32 @@ const Quote = ({ slice }) => {
           <Circle className='w-2/3 lg:w-1/2 text-brandPink dark:opacity-50 absolute -top-20 bottom-10 -left-20' />
         </FadeIn>
         <FadeIn x='0' y='50' className='mx-auto max-w-screen-lg px-12 py-12'>
-          <div className='w-full bg-brandRust my-3 md:my-6'>
-            <EmblaCarousel arrows={true} autoPlay={false} delayLength={5000} loop={true} slidesToScroll={1} controls={true}>
-              {slice.items.map((quote, index) => {
-                return (
-                  <blockquote className='relative min-w-full p-6 md:p-12' key={`item-${index}`} aria-selected={index === 0 ? 'true' : 'false'}>
-                    <div className={`relative text-3xl lg:text-4xl md:flex-grow text-center ${textStyle}`}>
-                      <PrismicRichText field={quote.quote.richText} />
+          <EmblaCarousel arrows={true} autoPlay={false} delayLength={5000} loop={true} slidesToScroll={1} controls={true}>
+            {slice.items.map((quote, index) => {
+              return (
+                <blockquote className='flex flex-col items-center justify-center min-w-full p-6 md:p-12 bg-brandRust' key={`item-${index}`} aria-selected={index === 0 ? 'true' : 'false'}>
+                  <div className={`relative text-3xl lg:text-4xl text-center mb-6 ${textStyle}`}>
+                    <PrismicRichText field={quote.quote.richText} />
+                  </div>
+                  <footer className='flex flex-col text-center gap-6 items-center'>
+                    <div className={`text-xl ${textStyle}`}>
+                      <p className='font-semibold'>{quote.author}</p>
+                      <p className=''>
+                        {quote.role && <span>{quote.role}</span>}
+                        {quote.company && quote.role && ','}
+                        {quote.company && <span> {quote.company}</span>}
+                      </p>
                     </div>
-                    <footer className='flex flex-col text-center gap-3 items-center'>
-                      <div className={`text-xl ${textStyle}`}>
-                        <p className='font-semibold'>{quote.author}</p>
-                        <p className=''>
-                          {quote.role && <span>{quote.role}</span>}
-                          {quote.company && quote.role && ','}
-                          {quote.company && <span> {quote.company}</span>}
-                        </p>
+                    {quote.image.gatsbyImageData && (
+                      <div className='inline-flex flex-shrink-0 mr-4 '>
+                        <GatsbyImage className='z-10 h-12 lg:h-20 w-12 lg:w-20 overflow-hidden rounded-full' image={getImage(quote.image)} alt={quote.image.alt || ''} />
                       </div>
-                      {quote.image.gatsbyImageData && (
-                        <div className='inline-flex flex-shrink-0 mr-4 '>
-                          <GatsbyImage className='z-10 h-12 lg:h-20 w-12 lg:w-20 overflow-hidden rounded-full' image={getImage(quote.image)} alt={quote.image.alt || ''} />
-                        </div>
-                      )}
-                    </footer>
-                  </blockquote>
-                )
-              })}
-            </EmblaCarousel>
-          </div>
+                    )}
+                  </footer>
+                </blockquote>
+              )
+            })}
+          </EmblaCarousel>
         </FadeIn>
       </section>
     </FadeInStagger>
