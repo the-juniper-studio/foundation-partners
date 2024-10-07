@@ -222,6 +222,7 @@ export const pageQuery = graphql`
           id
           slice_type
           primary {
+            carousel
             title {
               richText
             }
@@ -240,7 +241,7 @@ export const pageQuery = graphql`
             logo {
               alt
               copyright
-              gatsbyImageData(height: 90, layout: FIXED)
+              gatsbyImageData(height: 100, layout: FIXED)
             }
           }
         }
