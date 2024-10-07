@@ -19,10 +19,10 @@ const Quote = ({ slice }) => {
     <FadeInStagger duration='.5'>
       <section className={`component-quote overflow-hidden relative w-full ${dark && 'bg-brandPeach dark:bg-brandCream/10'}`}>
         <FadeIn x='0' y='50'>
-          <Circle className='w-1/3 lg:w-1/4 text-brandPink/50 absolute top-40 md:-top-40 bottom-0 md:-right-20' />
+          <Circle className='w-1/3 lg:w-1/4 text-brandPink/50 absolute top-96 sm:-top-40 bottom-0 md:-right-20' />
         </FadeIn>
         <FadeIn x='0' y='50'>
-          <Triangle className='w-2/3 text-brandMustard dark:opacity-50 absolute top-0 -right-20 bottom-0 md:-right-40 rotate-180' />
+          <Triangle className='w-2/3 text-brandMustard dark:opacity-50 absolute md:top-0 -right-20 bottom-0 md:-right-40 top-40 rotate-180' />
         </FadeIn>
         <FadeIn x='0' y='50'>
           <Circle className='w-2/3 lg:w-1/2 text-brandPink dark:opacity-50 absolute -top-20 bottom-10 -left-20' />
