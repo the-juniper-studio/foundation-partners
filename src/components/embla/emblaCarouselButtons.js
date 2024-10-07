@@ -3,7 +3,7 @@ import { GatsbyImage } from 'gatsby-plugin-image'
 
 export const PrevButton = ({ enabled, onClick }) => (
   <button
-    className='embla-button bg-brandBlack/20 hover:text-brandRust z-10 flex h-10 w-10 items-center justify-center rounded-full text-brandCream hover:bg-brandCream focus:outline-none'
+    className='embla-button bg-brandBlack/10 hover:text-brandRust z-10 flex h-10 w-10 items-center justify-center rounded-full text-brandCream hover:bg-brandCream focus:outline-none'
     onClick={onClick}
     disabled={!enabled}>
     <div className='sr-only'>Previous</div>
@@ -15,7 +15,7 @@ export const PrevButton = ({ enabled, onClick }) => (
 
 export const NextButton = ({ enabled, onClick }) => (
   <button
-    className='embla-button bg-brandBlack/20 hover:text-brandRust z-10 flex h-10 w-10 items-center justify-center rounded-full text-brandCream hover:bg-brandCream focus:outline-none'
+    className='embla-button bg-brandBlack/10 hover:text-brandRust z-10 flex h-10 w-10 items-center justify-center rounded-full text-brandCream hover:bg-brandCream focus:outline-none'
     onClick={onClick}
     disabled={!enabled}>
     <div className='sr-only'>Next</div>
