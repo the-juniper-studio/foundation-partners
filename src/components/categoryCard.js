@@ -5,7 +5,7 @@ import { GatsbyImage } from 'gatsby-plugin-image'
 const CategoryCard = ({ item }) => {
   const itemData = item.node.data
   const authorData = itemData.author?.document.data
-  const publishDate = item.node.first_publication_date_formatted
+
   let timeToRead
 
   const wordsPerMinute = 200
