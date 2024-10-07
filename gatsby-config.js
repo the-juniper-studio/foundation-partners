@@ -18,10 +18,10 @@ module.exports = {
     {
       resolve: `gatsby-plugin-gdpr-cookies`,
       options: {
-        googleAnalytics: {
-          trackingId: process.env.GATSBY_COMPANY_GA,
-          cookieName: 'gatsby-gdpr-google-analytics',
-          anonymize: true
+        googleTagManager: {
+          trackingId: process.env.GATSBY_COMPANY_GTM,
+          cookieName: 'gatsby-gdpr-gtm',
+          dataLayerName: 'dataLayer'
         },
         environments: ['production', 'development']
       }
