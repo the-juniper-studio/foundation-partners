@@ -71,7 +71,7 @@ const BlogpostTemplate = ({ data, location }) => {
             <Share title={pageData.page_title.text} link={page.url} image={pageData.page_image} />
             <div>
               <div className='prose mb-3 lg:mb-6 dark:prose-invert'>
-                <h2>Related articles</h2>
+                <h2>Related Insights</h2>
               </div>
               <Slice alias='posts' id={data.prismicBlogpost?.id} layout='list' type={page.type} />
             </div>
