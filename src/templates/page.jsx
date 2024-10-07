@@ -3,7 +3,6 @@ import { graphql } from 'gatsby'
 import { withPrismicPreview } from 'gatsby-plugin-prismic-previews'
 
 // Components
-import Breadcrumb from '../components/breadcrumb'
 import Layout from '../components/layout'
 import PageHeader from '../components/pageHeader'
 import Seo from '../components/seo'
