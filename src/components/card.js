@@ -8,7 +8,7 @@ const Card = ({ fields }) => {
     <li className={`component-card ${fields.button_link?.url != null && 'group'}`}>
       <FadeIn x='0' y='50' className='ease relative flex flex-grow transform flex-col p-3 h-full bg-opacity-10 bg-brandCream'>
         {fields.image.gatsbyImageData && (
-          <div className='overflow-hidden'>
+          <div className='overflow-hidden mx-3 mt-3'>
             <GatsbyImage className='overflow-hidden' image={getImage(fields.image)} alt={fields.image.alt || ''} />
           </div>
         )}

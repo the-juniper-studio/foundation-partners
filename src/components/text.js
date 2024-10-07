@@ -8,7 +8,7 @@ const Text = ({ slice }) => {
         <PrismicRichText field={slice.primary.text.richText} />
       </div>
       {slice.primary.button_text && (
-        <div className='mt-6 text-center'>
+        <div className='mt-6'>
           <PrismicLink className='button' field={slice.primary.button_link}>
             {slice.primary.button_text}
           </PrismicLink>

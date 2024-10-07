@@ -124,6 +124,8 @@ h6 {
     @apply text-brandRust dark:text-brandMustard font-semibold;
   }
 }
+.component-pricingtable {
+}
 
 .component-hero h2 {
   @apply mb-0 font-normal  text-3xl md:text-5xl;
