@@ -8,7 +8,7 @@ import Circle from './svg/circle'
 
 const PricingTable = ({ slice }) => {
   return (
-    <section className={`component-pricingtable pt-10 relative`}>
+    <section className='component-pricingtable pt-10 relative overflow-hidden'>
       <div className='text-center w-full px-6 text-brandRust font-semibold text-xl'>
         <PrismicRichText field={slice.primary.eyebrow_headline.richText} />
       </div>
@@ -16,6 +16,15 @@ const PricingTable = ({ slice }) => {
         <PrismicRichText field={slice.primary.title.richText} />
         <PrismicRichText field={slice.primary.description.richText} />
       </div>
+      <FadeIn x='0' y='50'>
+        <Circle className='w-1/3 lg:w-1/4 text-brandPink absolute z-0 top-0 bottom-0 md:-right-20' />
+      </FadeIn>
+      <FadeIn x='0' y='50'>
+        <Triangle className='w-2/3 text-brandMustard/80 dark:opacity-50 absolute z-0 md:top-0 -right-30 bottom-0 md:-right-40 top-40 rotate-180' />
+      </FadeIn>
+      <FadeIn x='0' y='50'>
+        <Circle className='w-2/3 lg:w-1/2 text-brandPink/50 dark:opacity-50 absolute z-0 -top-20 bottom-10 -left-20' />
+      </FadeIn>
       <FadeInStagger duration='.5' className='lg:grid grid-cols-3 gap-6 py-10 p-3 md:px-6 mt-3 space-y-3 lg:space-y-0 max-w-screen-2xl mx-auto'>
         {slice.items.map((product, index) => {
           return (
