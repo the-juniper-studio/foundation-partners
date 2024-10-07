@@ -3,7 +3,6 @@ import { graphql } from 'gatsby'
 import { withPrismicPreview } from 'gatsby-plugin-prismic-previews'
 
 // Components
-import Breadcrumb from '../components/breadcrumb'
 import CategoryCard from '../components/categoryCard'
 import Layout from '../components/layout'
 import PageHeader from '../components/pageHeader'
@@ -25,7 +24,7 @@ export const query = graphql`
   }
 `
 
-const CategoryTemplate = ({ data, location, pageContext }) => {
+const CategoryTemplate = ({ data, pageContext }) => {
   const page = data.prismicPage
   const pageData = page.data
   const items = data.allPrismicBlogpost.edges
@@ -34,7 +33,6 @@ const CategoryTemplate = ({ data, location, pageContext }) => {
   return (
     <Layout lang={page.lang} altLangs={page.alternate_languages}>
       <PageHeader pageData={pageData} type={page.type} />
-      {/* <Breadcrumb location={location} /> */}
       <div className='relative mx-auto max-w-7xl px-3 md:px-6 py-5 pb-4 sm:pb-8 md:py-8'>
         <div className='relative'>
           <ul className='grid grid-cols-1 md:grid-cols-3 gap-x-12 gap-y-6'>

@@ -16,7 +16,7 @@ const PageHeader = ({ authorData, type, pageData, publishDate }) => {
           {!article && (
             <>
               {pageData.page_text.text && (
-                <div className={`prose prose-xl min-w-full ${images && 'prose-invert'}`}>
+                <div className={`prose prose-xl min-w-full ${images && 'lg:prose-invert'}`}>
                   <PrismicRichText field={pageData.page_text.richText} />
                 </div>
               )}
@@ -64,9 +64,7 @@ const PageHeader = ({ authorData, type, pageData, publishDate }) => {
         </div>
         {images && (
           <div className='flex-1 z-0 images'>
-            <div className='absolute right-0 top-0 bottom-0 md:w-1/2 '>
-              <GatsbyImage image={pageData.page_image.gatsbyImageData} className='mask relative overflow-hidden sm:object-fill h-full w-full' alt={pageData.page_image.alt} loading='eager' />
-            </div>
+            <div className='absolute inset-0 w-full bg-brandMustard/80'></div>
             <div className='absolute inset-0'>
               <StaticImage className='relative h-full xl:h-auto xl:w-full' src='../images/hero-svg.png' alt='Hero overlay' />
             </div>
