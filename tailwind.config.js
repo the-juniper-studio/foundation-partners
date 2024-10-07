@@ -18,6 +18,7 @@ module.exports = {
         brandCream: '#fff6ed',
         brandBlack: '#010101'
       },
+
       typography: (theme) => ({
         DEFAULT: {
           css: {

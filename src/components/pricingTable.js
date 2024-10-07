@@ -19,7 +19,7 @@ const PricingTable = ({ slice }) => {
           {slice.items.map((product, index) => {
             return (
               <li key={`product-${index}`}>
-                <FadeIn x='0' y='50' className='flex flex-grow flex-col gap-6 md:gap-12 ease relative transform p-6 h-full bg-brandPeach dark:bg-white/10'>
+                <FadeIn x='0' y='50' className='pricing-card flex flex-grow flex-col gap-6 md:gap-12 ease relative transform p-6 h-full bg-brandPeach dark:bg-white/10'>
                   <div className='prose max-w-none lg:prose-lg dark:prose-invert'>
                     {product.plan_title && <h2 className=''>{product.plan_title.text}</h2>}
                     {product.price_option && <p className='mt-4 font-semibold border-b-2 pb-6 border-brandMustard'>{product.price_option.text}</p>}

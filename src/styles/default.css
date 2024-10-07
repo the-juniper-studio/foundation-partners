@@ -124,11 +124,12 @@ h6 {
     @apply text-brandRust dark:text-brandMustard font-semibold;
   }
 }
-.component-pricingtable {
+.component-pricingtable .pricing-card ul {
+  list-style-image: url('../../static/check.svg');
 }
 
 .component-hero h2 {
-  @apply mb-0 font-normal  text-3xl md:text-5xl;
+  @apply mb-0 font-normal text-3xl md:text-5xl;
   strong {
     @apply text-brandCream font-normal;
   }
