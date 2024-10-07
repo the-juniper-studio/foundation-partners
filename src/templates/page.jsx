@@ -17,14 +17,13 @@ export const query = graphql`
   }
 `
 
-const PageTemplate = ({ data, location }) => {
+const PageTemplate = ({ data }) => {
   const page = data.prismicPage
   const pageData = page.data
 
   return (
     <Layout lang={page.lang} altLangs={page.alternate_languages} uid={data.uid}>
       <PageHeader pageData={pageData} type={page.type} />
-      <Breadcrumb location={location} />
       <SliceList slices={pageData.body} />
     </Layout>
   )
