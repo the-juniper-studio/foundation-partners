@@ -7,7 +7,7 @@ import { FadeInStagger } from './fadeIn'
 
 const CardDeck = ({ slice }) => {
   var grid = 'mx-auto'
-  if (slice.items.length % 3 == 0) {
+  if (slice.items.length % 3 === 0) {
     grid = 'md:grid-cols-3 max-w-screen-2xl mx-auto'
   } else {
     grid = 'md:grid-cols-2 max-w-screen-xl mx-auto'

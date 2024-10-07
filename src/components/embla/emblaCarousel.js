@@ -69,7 +69,7 @@ const EmblaCarousel = ({ arrows, autoPlay, children, delayLength = 3000, control
         </div>
       )}
       <div className='relative'>
-        <div className='overflow-hidden' ref={emblaRef}>
+        <div className='overflow-hidden' role='group' ref={emblaRef}>
           <div className='flex w-full'>{children}</div>
         </div>
         {controls && children.length > 1 && (
