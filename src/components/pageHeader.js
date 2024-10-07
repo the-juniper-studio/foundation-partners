@@ -16,7 +16,7 @@ const PageHeader = ({ authorData, type, pageData, publishDate }) => {
           {!article && (
             <>
               {pageData.page_text.text && (
-                <div className={`prose prose-xl min-w-full ${images && 'lg:prose-invert'}`}>
+                <div className={`prose prose-xl min-w-full dark:prose-invert ${images && 'lg:prose-invert'}`}>
                   <PrismicRichText field={pageData.page_text.richText} />
                 </div>
               )}
