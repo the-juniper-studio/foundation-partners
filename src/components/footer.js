@@ -50,7 +50,11 @@ const Footer = ({ lang }) => {
         })}
       </div>
       <div className='p-3 md:p-6 mx-auto max-w-screen-xl text-sm'>
-        Crafted by Juniper <span className='text-brandPink'>&copy;</span> <span>{new Date().getFullYear()}</span>
+        Crafted by{' '}
+        <a href='https://www.thejuniperstudio.com/' rel='noopener'>
+          Juniper
+        </a>{' '}
+        <span className='text-brandPink'>&copy;</span> <span>{new Date().getFullYear()}</span>
       </div>
     </footer>
   )
