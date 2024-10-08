@@ -22,7 +22,7 @@
   status = 301
 
 [[redirects]]
-  from = "/ourteam/"
+  from = "/our-team/"
   to = "/team/"
   status = 301
 
