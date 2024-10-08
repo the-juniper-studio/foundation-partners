@@ -21,8 +21,8 @@ const PageTemplate = ({ data }) => {
   const pageData = page.data
 
   return (
-    <Layout lang={page.lang} altLangs={page.alternate_languages} uid={data.uid}>
-      <PageHeader pageData={pageData} type={page.type} />
+    <Layout lang={page.lang} altLangs={page.alternate_languages} uid={page.uid}>
+      <PageHeader pageData={pageData} type={page.type} uid={page.uid} />
       <SliceList slices={pageData.body} />
     </Layout>
   )

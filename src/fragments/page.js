@@ -424,12 +424,6 @@ export const pageQuery = graphql`
         id
       }
       page_button_text
-      page_image {
-        alt
-        copyright
-        gatsbyImageData
-        url
-      }
       page_text {
         richText
         text

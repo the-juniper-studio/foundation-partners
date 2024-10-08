@@ -1,22 +1,24 @@
 import React from 'react'
 import { PrismicLink, PrismicRichText } from '@prismicio/react'
-import { GatsbyImage, getImage, StaticImage } from 'gatsby-plugin-image'
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 
-const PageHeader = ({ authorData, type, pageData, publishDate }) => {
-  let images = pageData.page_image?.gatsbyImageData
+import Hero from './svg/hero'
+
+const PageHeader = ({ authorData, type, pageData, publishDate, uid }) => {
+  var homepage = uid === 'index'
 
   const article = type === 'blogpost'
   const timeToRead = type === 'blogpost' && publishDate ? Math.ceil(pageData.page_text?.text.split(' ').length / 200) : null
 
   return (
     <div className='hero relative grid min-h-[15vh] grid-cols-1 grid-rows-1 overflow-hidden bg-brandCream dark:bg-brandBlack'>
-      <div className={`h-full px-3 md:p-6 w-full max-w-screen-xl mx-auto ${images ? 'grid md:grid-cols-2 md:gap-4 inverted md:text-brandCream ' : 'text-brandBlack dark:text-white'}`}>
-        <div className={`z-10 flex flex-col justify-center pt-12 ${images ? 'pb-32 md:pb-40 lg:pb-48' : 'items-center sm:items-start'} sm:text-left space-y-8`}>
+      <div className={`h-full px-3 md:p-6 w-full max-w-screen-xl mx-auto ${homepage ? 'grid lg:grid-cols-2 lg:gap-4 inverted text-brandCream' : 'text-brandBlack dark:text-white'}`}>
+        <div className={`z-10 flex flex-col justify-center pt-12 ${homepage ? 'pb-32 md:pb-40 lg:pb-48' : 'items-center sm:items-start'} sm:text-left space-y-8`}>
           <PrismicRichText field={pageData.page_title.richText} />
           {!article && (
             <>
               {pageData.page_text.text && (
-                <div className={`prose prose-xl min-w-full dark:prose-invert ${images && 'lg:prose-invert'}`}>
+                <div className={`prose prose-xl dark:prose-invert ${homepage ? 'prose-invert max-w-screen-sm ' : 'min-w-full'}`}>
                   <PrismicRichText field={pageData.page_text.richText} />
                 </div>
               )}
@@ -62,12 +64,10 @@ const PageHeader = ({ authorData, type, pageData, publishDate }) => {
             </div>
           )}
         </div>
-        {images && (
+        {homepage && (
           <div className='flex-1 z-0 images'>
             <div className='absolute inset-0 w-full bg-brandMustard/80'></div>
-            <div className='absolute inset-0'>
-              <StaticImage className='relative h-full xl:h-auto xl:w-full' src='../images/hero-svg.png' alt='Hero overlay' />
-            </div>
+            <Hero className='absolute inset-y-0 -left-1/4 -right-1/2 h-full sm:inset-0 lg:right-0 xl:w-full xl:left-0 xl:bottom-0 xl:right-0 xl:top-auto xl:h-auto' />
           </div>
         )}
       </div>
