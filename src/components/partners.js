@@ -24,7 +24,7 @@ const CarouselView = ({ slice }) => (
   <div className='relative flex flex-row flex-wrap sm:flex-nowrap justify-center items-center mt-10 gap-2'>
     <EmblaCarousel autoPlay={true} delayLength={6000} loop={true} slidesToScroll={2} controls={false}>
       {slice.items.map((partner, index) => (
-        <div className='relative flex items-center p-3 lg:px-6 dark:invert dark:grayscale' key={`partner-${index}`}>
+        <div className='relative flex items-center p-1 sm:px-3 lg:px-6 dark:invert dark:grayscale' key={`partner-${index}`}>
           <PartnerLink partner={partner} />
         </div>
       ))}
