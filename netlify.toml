@@ -27,6 +27,7 @@
   status = 301
 
 [[redirects]]
-  from = "/howwework/"
+  from = "/how-we-work/"
   to = "/"
   status = 301
+
