@@ -18,7 +18,7 @@
 
 [[redirects]]
   from = "/content/*"
-  to = "/insights/*"
+  to = "/insights/"
   status = 301
 
 [[redirects]]
