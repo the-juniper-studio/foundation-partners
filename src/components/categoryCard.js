@@ -34,7 +34,7 @@ const CategoryCard = ({ item }) => {
               </div>
             )}
 
-            <div className='my-3 prose prose-lg'>
+            <div className='my-3 prose prose-lg dark:prose-invert'>
               <h3 className='group-hover:text-brandRust'>{itemData.page_title.text}</h3>
               {itemData.page_text.text.split(' ').slice(0, 20).join(' ')}
               &hellip;
