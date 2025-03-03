@@ -7,6 +7,8 @@
 <h1 align="center">
   Foundation Partners by The Juniper Studio
 </h1>
+<p>The website is build using [GatsbyJS)(https://www.gatsbyjs.com/) and deployed via [Netlify](https://www.netlify.com/)</p>
+<p> The Styliung is handled by [Tailwind](https://tailwindcss.com/) and The HEadless CMS is [Prismic](https://prismic.io/)</p>
 
 ## 🚀 Quick start
     
