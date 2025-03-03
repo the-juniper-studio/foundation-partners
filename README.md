@@ -9,13 +9,20 @@
 </h1>
 
 ## 🚀 Quick start
-
+    
 1.  **Start developing.**
 
     Navigate into your new site’s directory and start it up.
 
-    ```shell
+    ``` shell
     cd foundation-partners/
+    ```
+
+    create a new file in the root `.env.development` with the environment variables. 
+
+
+    ``` shell
+    npm i
     gatsby clean && gatsby develop develop
     ```
 
@@ -30,7 +37,7 @@
 
 ## 🧐 What's inside?
 
-This project was built using React framework GatsbyJS, content managed by [Prismic](https://prismic.io/) and styled using [TailwindCSS](https://tailwindcss.com/)
+This project was built using React framework GatsbyJS, content managed by [Prismic](https://prismic.io/) and styled using [TailwindCSS](https://tailwindcss.com/).
 
 A quick look at the top-level files and directories you'll see in this project.
 
