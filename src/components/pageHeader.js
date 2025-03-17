@@ -22,12 +22,30 @@ const PageHeader = ({ authorData, type, pageData, publishDate, uid }) => {
                   <PrismicRichText field={pageData.page_text.richText} />
                 </div>
               )}
-              {pageData.page_button_link && (
-                <div>
-                  <PrismicLink className='button' field={pageData.page_button_link}>
-                    {pageData.page_button_text}
-                  </PrismicLink>
+
+              {homepage ? (
+                <div className='flex gap-4 items-center'>
+                  <a
+                    href="https://calendar.app.google/9XzG5qUunmKMgrPT9"
+                    className='button text-brandMustard'
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Book a Call
+                  </a>
+
+                  <a href="/services" className='text-white hover:text-opacity-80 flex items-center transition-all group font-bold'>
+                    See our Services <span className="ml-2 transition-transform duration-300 group-hover:translate-x-1">→</span>
+                  </a>
                 </div>
+              ) : (
+                pageData.page_button_link && (
+                  <div>
+                    <PrismicLink className='button' field={pageData.page_button_link}>
+                      {pageData.page_button_text}
+                    </PrismicLink>
+                  </div>
+                )
               )}
             </>
           )}
