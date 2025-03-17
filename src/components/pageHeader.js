@@ -1,6 +1,7 @@
 import React from 'react'
 import { PrismicLink, PrismicRichText } from '@prismicio/react'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
+import { Link } from 'gatsby'
 
 import Hero from './svg/hero'
 
@@ -25,18 +26,13 @@ const PageHeader = ({ authorData, type, pageData, publishDate, uid }) => {
 
               {homepage ? (
                 <div className='flex gap-4 items-center'>
-                  <a
-                    href="https://calendar.app.google/9XzG5qUunmKMgrPT9"
-                    className='button text-brandMustard'
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
+                  <a href='https://calendar.app.google/9XzG5qUunmKMgrPT9' className='button text-brandMustard' target='_blank' rel='noopener noreferrer'>
                     Book a Call
                   </a>
 
-                  <a href="/services" className='text-white hover:text-opacity-80 flex items-center transition-all group font-bold'>
-                    See our Services <span className="ml-2 transition-transform duration-300 group-hover:translate-x-1">→</span>
-                  </a>
+                  <Link to='/services' className='text-white hover:text-opacity-80 flex items-center transition-all group font-bold'>
+                    See our Services <span className='ml-2 transition-transform duration-300 group-hover:translate-x-1'>→</span>
+                  </Link>
                 </div>
               ) : (
                 pageData.page_button_link && (
